@@ -38,7 +38,7 @@
           &--small{
             font-size: 4vw;
             @include m.mq(sp) {
-              font-size: 6rem;
+              font-size: 8rem;
             }
           }
           &--contact{
@@ -79,6 +79,12 @@
         width: 50vw;
         height: 50vw;
         right: calc(100% - 25vw);
+        @include m.mq(sp) {
+          top: 25vw;
+          width: 100vw;
+          height: 100vw;
+          right: calc(100% - 50vw);          
+        }
     }
     &::after {
       z-index: -1;
@@ -91,7 +97,13 @@
       height: 50vw;
       background-color: #fff;
       right: calc(100% + 5vw);
-  }
+      @include m.mq(sp) {
+        top: 25vw;
+        width: 100vw;
+        height: 100vw;        
+        right: calc(100% + 15vw);
+      }
+    }
 }
 
 
@@ -173,6 +185,9 @@ button:hover, .button:hover {
   text-align: right;
   width: 17rem;
   margin: 0 0 0 auto;
+  @include m.mq(sp) {
+    width: 25rem;
+  }
   a{
     display: flex;
     align-items: center;
@@ -180,6 +195,10 @@ button:hover, .button:hover {
     border-radius: 6px;
     padding: 1rem 1rem 1rem 1.5rem;
     letter-spacing: 0.1em;
+    @include m.mq(sp) {
+      font-size: 2.6rem;
+      padding: 1rem 1rem 1rem 2.5rem;
+    }
     img {
       padding: 0 0 0.3rem 1.6rem;
       vertical-align: middle;
