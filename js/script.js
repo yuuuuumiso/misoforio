@@ -22,11 +22,11 @@ var flug = true,
     $window = $(window);
 
 $window.on('scroll',function(){
-  $('.recommend .box').each(function(){
-      var imgPos = $(this).offset().top;    
+  $('.xxx').each(function(){
+      var imgPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > imgPos - windowHeight + windowHeight / 3){
+      if (scroll > imgPos - windowHeight + windowHeight / 4){
         $(this).addClass('is-active');
       } else {
         $(this).removeClass('is-active');
