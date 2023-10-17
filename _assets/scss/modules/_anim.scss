@@ -1,0 +1,39 @@
+@charset "utf-8";
+/*anim start*/
+@keyframes show {
+from {
+opacity: 0.3;
+}
+to {
+opacity: 1;
+}
+}
+
+/* 4-7 にゅーん（滑らかに変形して出現） */
+.smooth{
+animation-name: smoothAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+transform-origin: left;
+opacity:0;
+}
+@keyframes smoothAnime{
+  from {
+  transform: translate3d(0, 100%, 0) skewY(12deg);
+  opacity:0;
+  }
+  to {
+  transform: translate3d(0, 0, 0) skewY(0);
+  opacity:1;
+  }
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*anim end*/

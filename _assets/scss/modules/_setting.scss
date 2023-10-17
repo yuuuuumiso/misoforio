@@ -1,0 +1,57 @@
+@charset "utf-8";
+@use 'mixin' as m;
+
+* {
+box-sizing: border-box;
+}
+html{
+font-size: .5208333333vw;//1920pxに対して10pxの比率。スマホのときは62.5%+remで決め打ち
+@include m.mq(sp) {
+    font-size: 1.3020833333vw;//768pxに対して10pxの比率
+  }
+}
+body {
+    line-height: 1.6;
+    min-width: 320px;
+    font-size: 1rem;
+    color: #333;
+    background: #fff;
+    -webkit-text-size-adjust:100%;
+    margin: auto;
+    font-family: 'Noto Sans JP', sans-serif,"游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic;
+    word-wrap: break-word;
+    @include m.mq(sp) {
+        background: #dddddd;
+      }
+}
+body.is-open{
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+.is-pc {
+    display: block !important;
+}
+.is-sp {
+    display: none !important;
+}
+img.is-pc{
+    margin: auto;
+}
+img.is-sp{
+    margin: auto;
+}
+
+
+
+

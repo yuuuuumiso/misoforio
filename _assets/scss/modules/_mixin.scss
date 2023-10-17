@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+$breakpoint: (
+  sp: 'screen and (max-width: 767px)',
+  pc: 'screen and (min-width: 768px)'
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}
+
+// 上下左右中央配置 @include center;
+// @mixin center {
+//     text-align: center;
+//     position: relative;
+//     top: 50%;
+//     -webkit-transform: translateY(-50%);
+//     -ms-transform: translateY(-50%);
+//     transform: translateY(-50%);
+// }
+// リンクカラーの生成 @include link-color(#345fc9);
+// @mixin link-color($color) {
+//     color: $color;
+//     &:hover,
+//     &:active,
+//     &:focus {
+//         color: lighten($color, 20%);
+//     }
+// }
+
+//  透明度の指定 @include opacity(.7);
+// @mixin opacity($opacity) {
+//     opacity: $opacity;
+//     $ieopacity: ($opacity * 100);
+//     filter: alpha(opacity=$ieopacity);
+// }
+
+// フォントサイズの指定 (rem対応) @include font-size(16) ;
+// @mixin font-size($size, $base: 16) {
+//     font-size: $size + px;
+//     font-size: ($size / $base) + rem;
+// }
+//mix
+
+//media query
+@mixin pc {
+    @media screen and (min-width: $pc) {
+        @content
+    }
+};
+@mixin sp {
+    @media screen and (max-width: $sp) {
+        @content
+    }
+};
+@mixin onlyPc {
+    @media screen and (min-width: $pc) {
+        @content
+    }
+};
+@mixin onlySp {
+    @media screen and (max-width: $sp) {
+        @content
+    }
+};
+
+//fontsize
+@mixin fontsize($size: 24, $base: 16) {
+    // font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+};
+
+//cf  @include clearfix;
+@mixin clearfix {
+    *zoom: 1;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// 三角矢印  @include trianglearrow(right, 12, #ccc);   
+// @mixin trianglearrow($direction: right, $size: 12, $color: $gray) {
+//     $set: left;
+
+//     @if $direction==left {
+//         $set: right;
+//     }
+//     @elseif $direction==top {
+//         $set: bottom;
+//     }
+//     @elseif $direction==bottom {
+//         $set: top;
+//     }
+//     @else {
+//         $set: left;
+//     }
+//     $size: round($size / 2);
+//     width: 0;
+//     height: 0;
+//     border: $size+px solid transparent;
+//     border-#{$set}-color: $color;
+// }
+
+//矢印  @include arrow(16, 16, double, #ddd000, left);
+// @mixin arrow($size, $border-width, $border-style, $border-color, $direction) {
+//     content: "";
+//     display: inline-block;
+//     position: absolute;
+//     top: 50%;
+//     width: $size;
+//     height: $size;
+//     margin-top: - ($size / 2);
+//     border: $border-width $border-style $border-color;
+//     @if $direction==up {
+//         -webkit-transform: rotate(-135) + deg;
+//         -moz-transform: rotate(-135) + deg;
+//         transform: rotate(-135) + deg;
+//     }
+//     @else if $direction==under {
+//         -webkit-transform: rotate(45) + deg;
+//         -moz-transform: rotate(45) + deg;
+//         transform: rotate(45) + deg;
+//     }
+//     @else if $direction==right {
+//         -webkit-transform: rotate(-45) + deg;
+//         -moz-transform: rotate(-45) + deg;
+//         transform: rotate(-45) + deg;
+//     }
+//     @else if $direction==left {
+//         -webkit-transform: rotate(135) + deg;
+//         -moz-transform: rotate(135) + deg;
+//         transform: rotate(135) + deg;
+//     }
+//     @else {
+//         -webkit-transform: rotate($direction) + deg;
+//         -moz-transform: rotate($direction) + deg;
+//         transform: rotate($direction) + deg;
+//     }
+// }
+
+// モダンなグラデーション背景　@include bg-gradient(90deg, #fbb, 100%);
+// @mixin bg-gradient($angle: 180deg, $color: #0bd, $amount: 20%) {
+//     background: linear-gradient($angle, $color, adjust-hue($color, $amount)) fixed;
+// }
+
+// 文字にグラデーション　@include gradient-text; @include gradient-text(120deg, #2d0, 90%);
+// @mixin gradient-text($angle: 45deg, $color: #f82, $amount: 35%) {
+//     color: $color;
+//     background: -webkit-linear-gradient($angle, $color, adjust-hue($color, $amount));
+//     -webkit-text-fill-color: transparent;
+//     -webkit-background-clip: text;
+//     display: inline-block;
+// }
+
+// 自動でベンダープレフィックスをつける　@include prefixes(transition, 0.5s);
+// @mixin prefixes($property, $value) {
+//     @each $prefix in -webkit-,
+//     -moz-,
+//     -ms-,
+//     -o-,
+//     '' {
+//         #{$prefix}#{$property}: $value;
+//     }
+// }
+
+//★メディアクエリをmixinでまとめる
+// @mixin mediaquery($breakpoint: 768px) {
+//     @media screen and (min-width: $breakpoint) {
+//         @content;
+//     }
+// }
+// mq
+// 変数の定義
+// min-width　スマホファースト
+// $breakpoint-up: (
+//   'sm': 'screen and (min-width: 400px)',
+//   'md': 'screen and (min-width: 768px)',
+//   'lg': 'screen and (min-width: 1000px)',
+//   'xl': 'screen and (min-width: 1200px)',
+// ) !default;
+
+// max-width PCファースト
+// $breakpoint-down: (
+//   'sm': 'screen and (max-width: 399px)',
+//   'md': 'screen and (max-width: 767px)',
+//   'lg': 'screen and (max-width: 999px)',
+//   'xl': 'screen and (max-width: 1199px)',
+// ) !default;
+
+// @mixinの定義
+//スマホファースト
+// @mixin mq-up($breakpoint: md) {
+//   @media #{map-get($breakpoint-up, $breakpoint)} {
+//     @content;
+//   }
+// }
+
+//PCファースト
+// @mixin mq-down($breakpoint: md) {
+//   @media #{map-get($breakpoint-down, $breakpoint)} {
+//     @content;
+//   }
+// }
+
+// 長文 テキストを枠内に収める　@include truncate;
+// @mixin truncate($width: 100%) {
+//     width: $width;
+//     max-width: 100%;
+//     display: block;
+//     overflow: hidden;
+//     white-space: nowrap;
+//     text-overflow: ellipsis;
+// }
+
+// position absolute @include absolute-top-left(20px, 30px); @include absolute-top-left(10%, 50%);
+// @mixin absolute-top-left($top: 0, $left: 0) {
+//     position: absolute;
+//     top: $top;
+//     left: $left;
+// }
+
+// @mixin absolute-top-right($top: 0, $right: 0) {
+//     position: absolute;
+//     top: $top;
+//     right: $right;
+// }
+
+// @mixin absolute-bottom-left($bottom: 0, $left: 0) {
+//     position: absolute;
+//     bottom: $bottom;
+//     left: $left;
+// }
+
+// @mixin absolute-bottom-right($bottom: 0, $right: 0) {
+//     position: absolute;
+//     bottom: $bottom;
+//     right: $right;
+// }
+
+//絶対位置位置  @include absPosition(5px, 20px, 10px, 15px);
+// @mixin absPosition ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+//     position: absolute;
+//     top: $top;
+//     right: $right;
+//     bottom: $bottom;
+//     left: $left;
+// }
+
+// border-radius @include border-radius(10); @include border-radius-per(100%);
+// @mixin border-radius($radius) {
+//     -webkit-border-radius: $radius + px;
+//     -moz-border-radius: $radius + px;
+//     border-radius: $radius + px;
+// }
+
+// @mixin border-radius-per($radius) {
+//     -webkit-border-radius: $radius;
+//     -moz-border-radius: $radius;
+//     border-radius: $radius;
+// }
+
+// box-shadow @include box-shadow(10px, 10px, 0px, 0px, #000);
+// @mixin box-shadow($horizontal: 10px, $vertical: 10px, $blur: 0px, $shadow: 0px, $color: #000000) {
+//     -webkit-box-shadow: $horizontal $vertical $blur $shadow $color;
+//     -moz-box-shadow: $horizontal $vertical $blur $shadow $color;
+//     box-shadow: $horizontal $vertical $blur $shadow $color;
+// }
+
+
+
+// ボックス内の上下真ん中に @include middle-line(40);
+// @mixin middle-line($height) {
+//     height: $height + px;
+//     line-height: $height + px;
+// }
+
+// 左右が丸い長方形　@include rounded(50);
+// @mixin rounded($height, $display: inline-block) {
+//     $space: round($height / 2) + px;
+//     display: $display;
+//     padding: 0 $space;
+//     @include border-radius($height);
+//     @include middle-line($height);
+// }
+
+// 吹き出し　@include pop(#ccc, 10, 30%);
+// @mixin pop($color, $size, $position) {
+//     position: relative;
+//     background: $color;
+
+//     &:after {
+//         bottom: 100%;
+//         left: $position;
+//         border: solid transparent;
+//         content: " ";
+//         height: 0;
+//         width: 0;
+//         position: absolute;
+//         pointer-events: none;
+//         border-bottom-color: $color;
+//         border-width: $size + px;
+//         margin-left: -$size + px;
+//     }
+// }
+
+// センター配置　@include center-layout(960px);　@include center-layout(1200px, true);
+// @mixin center-layout($width, $max: false) {
+//     display: block;
+//     @if $max {
+//         max-width: $width;
+//     }
+//     @else {
+//         width: $width;
+//     }
+//     margin-right: auto;
+//     margin-left: auto;
+// }
+
+// 疑似要素　&::before {@include pseudo-element;}　&::after {@include pseudo-element('foo');}
+// @mixin pseudo-element($content: '', $position: absolute, $display: block) {
+//     position: $position;
+//     display: $display;
+//     content: $content;
+// }
+
+// 縦横比を維持したブロック　@include aspect-ratio(960, 600);　@include aspect-ratio(960, 600, '../example.jpg');
+// @mixin aspect-ratio($width, $height, $image: null) {
+//     display: block;
+//     width: 100%;
+//     height: 0;
+//     padding-top: ($height / $width) * 100%;
+//     @if $image !=null {
+//         background: url($image) 50% 50% no-repeat;
+//         background-size: cover;
+//     }
+// }
