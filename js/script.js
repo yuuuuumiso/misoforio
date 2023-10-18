@@ -19,6 +19,7 @@ $(function() {
 var flug = true,
     $openBtn = $('.openbtn'),
     $body = $(document.body), 
+    $navBg = $('.g-nab-bg'),
     $window = $(window);
 
 $window.on('scroll',function(){
@@ -39,6 +40,14 @@ $openBtn.click(function () {//ボタンがクリックされたら
   $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
   $("#g-nav li").toggleClass('smooth');//li に smoothクラスを付与
   $body.toggleClass('is-open');
+  $navBg.toggleClass('is-open');
 });
- 
-});//ready
+
+$navBg.on("click", function () {
+	$(this).removeClass('is-open');
+  $openBtn.removeClass('active');
+  $("#g-nav").removeClass('panelactive');
+  $("#g-nav li").removeClass('smooth');
+  $body.removeClass('is-open');
+});
+});

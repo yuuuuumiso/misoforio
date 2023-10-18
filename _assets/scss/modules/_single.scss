@@ -1,5 +1,5 @@
 @use './c-title';
-
+@use 'mixin' as m;
 
 
 .wrap--single{
@@ -7,6 +7,9 @@ background-color:#ffffff;
  }
 .post{
 padding: 20rem 0 20rem;
+@include m.mq(sp) {
+  padding:20rem 5rem 20rem;
+}
 }
   .single-post{
   margin:0 auto 0;
@@ -16,7 +19,7 @@ padding: 20rem 0 20rem;
   background: #ffffff;
   }
   .single-post__inner{
-  padding: 5rem;
+  padding:5rem 5rem 15rem;
   }
 .post{
     .postTtl01{
@@ -25,4 +28,49 @@ padding: 20rem 0 20rem;
         color: #333;
         font-weight: 600;
     }
+    .postTtl02{
+      margin-bottom: 2rem;
+      font-size: 3.8rem;
+      font-weight: 600;
+      padding: 0.25em 0.5em;/*上下 左右の余白*/
+      color: #494949;/*文字色*/
+      background: transparent;/*背景透明に*/
+      border-left: solid 5px #7db4e6;/*左線*/
+  }
+  .postTtl03{
+    border-bottom: solid 3px #7db4e6;
+    margin-bottom: 2rem;
+    font-size: 3.0rem;
+    font-weight: 600;
+    padding: 0.25em 0;/*上下 左右の余白*/
+  }
+.postTtl04{
+  margin-bottom: 1.6rem;
+  font-size: 2.6rem;
+  font-weight: 600;
+  position: relative;
+  padding-left: 1.2em;/*アイコン分のスペース*/
+  &:before{
+content: "✓";/*アイコンのユニコード*/
+position: absolute;/*絶対位置*/
+font-size: 1em;/*サイズ*/
+left: 0;/*アイコンの位置*/
+top: 0;/*アイコンの位置*/
+color: #6C9FCE; /*アイコン色*/
+  }
+}
+.postData{
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+.postParagraph{
+  margin-bottom: 2.2rem;
+  font-size: 2.2rem;
+}
+.postThumb{
+  margin-bottom: 5rem;
+  img{
+    width: 100%;
+  }
+}
 }

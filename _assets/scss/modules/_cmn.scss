@@ -170,7 +170,27 @@ button:hover, .button:hover {
 
 
 
-
+.catsList{
+  $this:&;
+  &__item{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #0e7dc7;
+    margin: 0 0.5rem 1rem 0;
+    @include m.mq(sp) {
+      font-size: 1.7rem;
+    }
+  }
+  &--single{
+    margin-bottom: 2rem;
+    #{$this}__item{
+    font-size: 1.6rem; 
+    }
+  }
+}
 
 
 
