@@ -45,9 +45,12 @@ function add_files(){
 
     //css読み込み
     wp_enqueue_style('my_style',DIRE.'/css/style.css');
-    wp_enqueue_style('notosansjp','http://fonts.googleapis.com/earlyaccess/notosansjp.css');
-    wp_enqueue_style('lato','https://fonts.googleapis.com/css?family=Lato');
-    wp_enqueue_style( 'Mplus_1p', 'https://fonts.googleapis.com/earlyaccess/mplus1p.css' );
+//    wp_enqueue_style('notosansjp','http://fonts.googleapis.com/earlyaccess/notosansjp.css');
+//    wp_enqueue_style('lato','https://fonts.googleapis.com/css?family=Lato');
+
+// 上記ではiPhoneで反映されなかった
+wp_enqueue_style('googlefonts', "https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap", array(), null );
+
 
 
     //WP本体のjQuery+jsファイルを読み込む
