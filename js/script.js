@@ -1,3 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+//enquede読む場合はwp仕様にする必要がある
+
+
+
+
+
 //for ipad
 var ua = navigator.userAgent;
 var getDevice = (function() {

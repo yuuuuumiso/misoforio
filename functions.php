@@ -65,14 +65,6 @@ add_action('wp_enqueue_scripts', 'add_files');
 
 
 
-
-function my_enqueue_scripts() {
-  wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0.0', true );
-  wp_enqueue_style( 'style-name', get_template_directory_uri() . '/css/style.css', array(), '1.0.0', false );
-}
-add_action( 'wp_enqueue_scripts', 'my_enqueue_scripts' );
-
-
 //抜粋文を50文字に減らす
 // function change_excerpt_length( $length ) {
 //   return 50;
