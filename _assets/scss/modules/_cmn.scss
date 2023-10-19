@@ -3,7 +3,7 @@
 // cmn
 
 .wrap{
-  background:#fff url('../../../img/bg_mv.png') no-repeat left top / 100% auto;
+  background:#fff url('../img/bg_mv.png') no-repeat left top / 100% auto;
 }
 
 .sec{
@@ -25,7 +25,7 @@
     line-height: 1;
     font-family: "Lato";
     letter-spacing: 5px;
-        background:no-repeat url('../../../img/bg_ttl01.png') left center / auto 60%;
+        background:no-repeat url('../img/bg_ttl01.png') left center / auto 60%;
         @include m.mq(sp) {
           font-size: 12rem;
           padding: 0 0 0 7vw;
@@ -42,7 +42,7 @@
             }
           }
           &--contact{
-            background-image: url('../../../img/bg_ttl02.png');
+            background-image: url('../img/bg_ttl02.png');
           }
       }
 }

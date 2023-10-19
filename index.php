@@ -2,7 +2,7 @@
 
 <div class="mv">
   <div class="mv__logo">Miso's<br>PORTFOLIO</div>
-  <div class="mv__img"><img src="../../img/mv_img03.png"></div>
+  <div class="mv__img"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_img03.png"></div>
 </div>
 
 <section class="sec about">
@@ -12,14 +12,14 @@
       <p class="sec__ttl-sub">わたしについて</p>
     </div>
     <div class="aboutBox">
-      <div class="aboutBox__img"><img src="../../img/about_img01.jpg"></div>
+      <div class="aboutBox__img"><img src="<?php echo get_template_directory_uri(); ?>/img/about_img01.jpg"></div>
       <div class="aboutBox__body">
         <h3 class="aboutBoxTtl">Webコーダー / ブロガー<br><span>味噌</span></h3>
         <p class="aboutBox__desc">1990年生まれ。大学を卒業後営業職に従事するも職場でのパワハラに合いメンタル崩壊前に逃亡。<br><br>その後は東南アジアを放浪し、職業訓練校にてWeb制作を学ぶ。
           卒業後は制作会社でコーダーを経験。現在はメーカーでWeb担当として「コーディング・デザイン・マーケティング」を担当。<br><br>個人では月間PVは3.5万の「味噌ブログ」を運営。並行して運用しているnoteは11万アクセスを突破。</p>
           <ul class="aboutBox__snsLists">
-            <li class="aboutBox__snsList"><a href=""><img src="../../img/ico_ig.svg"></a></li>
-            <li class="aboutBox__snsList"><a href=""><img src="../../img/ico_tw.svg"></a></li>
+            <li class="aboutBox__snsList"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/ico_ig.svg"></a></li>
+            <li class="aboutBox__snsList"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/ico_tw.svg"></a></li>
           </ul>  
       </div>
     </div>
@@ -36,9 +36,9 @@
     <div class="skillBox">
       <div class="skillBox__inner">
       <ul class="skillLists">
-        <li class="skillList"><h3 class="skillList__ttl">コーディング</h3><p class="skillList__ttl--sub">Cording</p><p class="skillList__img"><img src="../../img/skill_ico01.svg"></p><p class="skillList__desc">html、css、jQueryを使用したコーディングができます。WordPressの組み込みも可能です。</p></li>
-        <li class="skillList"><h3 class="skillList__ttl">デザイン</h3><p class="skillList__ttl--sub">Design</p><p class="skillList__img"><img src="../../img/skill_ico02.svg"></p><p class="skillList__desc">バナーやLPなどのデザインが可能です。Photoshop、Illustrator、Figmaなどのデザインソフトが利用できます。</p></li>
-        <li class="skillList"><h3 class="skillList__ttl">ライティング</h3><p class="skillList__ttl--sub">Writing</p><p class="skillList__img"><img src="../../img/skill_ico03.svg"></p><p class="skillList__desc">3年以上運営しているブログの経験を活かしてWebライティングを行います。検索順位で1位を取った経験も数回あります。</p></li>
+        <li class="skillList"><h3 class="skillList__ttl">コーディング</h3><p class="skillList__ttl--sub">Cording</p><p class="skillList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/skill_ico01.svg"></p><p class="skillList__desc">html、css、jQueryを使用したコーディングができます。WordPressの組み込みも可能です。</p></li>
+        <li class="skillList"><h3 class="skillList__ttl">デザイン</h3><p class="skillList__ttl--sub">Design</p><p class="skillList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/skill_ico02.svg"></p><p class="skillList__desc">バナーやLPなどのデザインが可能です。Photoshop、Illustrator、Figmaなどのデザインソフトが利用できます。</p></li>
+        <li class="skillList"><h3 class="skillList__ttl">ライティング</h3><p class="skillList__ttl--sub">Writing</p><p class="skillList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/skill_ico03.svg"></p><p class="skillList__desc">3年以上運営しているブログの経験を活かしてWebライティングを行います。検索順位で1位を取った経験も数回あります。</p></li>
       </ul>
     </div>
    </div>
@@ -53,45 +53,27 @@
     </div>
     <div class="blogBox">
       <ul class="blogLists">
-        <li class="blogList">
-         <a class="blogList__link" href="">
-          <p class="blogList__img"><img src="../../img/blog_img01.png"></p>
+
+
+
+
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post(); ?>
+    <li class="blogList">
+         <a class="blogList__link" href="<?php the_permalink(); ?>">
+          <p class="blogList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/blog_img01.png"></p>
           <div class="blogList__body">
-            <p class="blogList__date">2023.11.22</p>
+            <p class="blogList__date"><?php the_time( 'Y/n/j' ); ?></p>
             <ul class="catsList">
-              <li class="catsList__item">プログラミング</li>
+              <li class="catsList__item">ここは動的に入れます</li>
             </ul>
-            <p class="blogList__ttl">残業しないと生活できない！今すぐできる5つの対応とは？</p>
+            <p class="blogList__ttl"><?php the_title(); ?></p>
           </div>
          </a>
         </li>
-        <li class="blogList">
-          <a class="blogList__link" href="">
-           <p class="blogList__img"><img src="../../img/blog_img01.png"></p>
-           <div class="blogList__body">
-             <p class="blogList__date">2023.11.22</p>
-             <ul class="blogList__cats">
-               <li class="blogList__cat">プログラミング</li>
-               <li class="blogList__cat">プログラミング</li>
-              </ul>
-             <p class="blogList__ttl">残業しないと生活できない！今すぐできる5つの対応とは？</p>
-           </div>
-          </a>
-         </li>
-         <li class="blogList">
-          <a class="blogList__link" href="">
-           <p class="blogList__img"><img src="../../img/blog_img01.png"></p>
-           <div class="blogList__body">
-             <p class="blogList__date">2023.11.22</p>
-             <ul class="blogList__cats">
-               <li class="blogList__cat">プログラミング</li>
-             </ul>
-             <p class="blogList__ttl">残業しないと生活できない！今すぐできる5つの対応とは？</p>
-           </div>
-          </a>
-         </li>
+        <?php endwhile; endif; ?>
         </ul>
-        <p class="btn01"><a href="">一覧を見る<img src="../../img/ico_btn01.png" alt=""></a></p>
+        <p class="btn01"><a href="">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png" alt=""></a></p>
     </div>
   </div>
 </section>
