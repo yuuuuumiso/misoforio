@@ -5,7 +5,7 @@ const sass = require('gulp-dart-sass');//Dart Sass はSass公式が推奨 @use�
 const plumber = require("gulp-plumber"); // エラーが発生しても強制終了させない
 const notify = require("gulp-notify"); // エラー発生時のアラート出力
 const browserSync = require("browser-sync"); //ブラウザリロード
-var mmq = require( 'gulp-merge-media-queries' );//mqまとめる
+const mmq = require( 'gulp-merge-media-queries' );//mqまとめる
 
 
 // 入出力するフォルダを指定
