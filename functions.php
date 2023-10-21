@@ -1,6 +1,6 @@
 <?php
 
-
+//WP基本設定
 function themeSetup() {
  
 //サムネイル利用
@@ -22,6 +22,14 @@ add_theme_support( 'html5', array(
 add_action( 'after_setup_theme', 'themeSetup' );
 
 
+/**
+ * タイトルタグの区切り文字をエン・ダッシュから縦線に変更する
+ */
+add_filter('document_title_separator', 'my_document_title_separator');
+function my_document_title_separator($separator){
+    $separator = '|';
+    return $separator;
+}
 
 
 
