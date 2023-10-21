@@ -368,7 +368,7 @@ img.is-sp {
 	position: relative;
 	line-height: 1;
 	font-family: "Lato";
-	letter-spacing: 5px;
+	letter-spacing: 3px;
 	background: no-repeat url("../img/bg_ttl01.png") left center/auto 60%;
 }
 
@@ -538,6 +538,35 @@ img.is-sp {
 	vertical-align: middle;
 }
 
+/*デフォルトのマウスカーソルを非表示にする*/
+
+/*独自のマウスカーソルを作成*/
+
+.cursor {
+	position: fixed;
+	top: -5px;
+	left: -5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 4;
+	transition: width 0.2s, height 0.2s, top 0.2s, left 0.2s;
+	transition-timing-function: ease;
+	transform: translate(0, 0);
+	pointer-events: none;
+}
+
+/*aタグにホバーした時に見た目変化*/
+
+.cursor.cursor--hover {
+	top: -20px;
+	left: -20px;
+	width: 60px;
+	height: 60px;
+	background: rgba(15, 125, 200, 0.7);
+}
+
 .mv {
 	height: calc(100vh - 0px);
 	display: flex;
@@ -695,6 +724,109 @@ img.is-sp {
 	margin: 0 0.5rem 1rem 0;
 }
 
+.worksBody {
+	overflow: hidden;
+	padding: 0 0 0 12vw;
+	position: relative;
+}
+
+.worksItems__ttl {
+	font-weight: bold;
+	font-size: 2.4rem;
+}
+
+.worksItems__wrap {
+	padding: 3rem 0 3rem 2rem;
+}
+
+.worksItems__item {
+	font-size: 2rem;
+	padding: 0 0 3rem 0;
+	position: relative;
+	width: 30vw;
+	margin-right: 5vw;
+	vertical-align: top;
+	box-shadow: 0px 0px 15px -5px #777777;
+	margin: 0 0 3rem;
+	border-radius: 10px;
+}
+
+.worksItems__image img {
+	border-radius: 10px 10px 0 0;
+	object-fit: cover;
+	height: 20vh;
+}
+
+.worksItems__body {
+	padding: 2rem;
+}
+
+.worksItems__date {
+	font-size: 2.2rem;
+}
+
+.swiper-container {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	z-index: 1;
+}
+
+.swiper-slide {
+	height: auto;
+}
+
+.swiper-slide a {
+	display: block;
+	background: #ffffff;
+	border-radius: 10px;
+}
+
+/* 前に戻る画像パス */
+
+.slide-btn {
+	display: flex;
+	width: 18rem;
+	margin: 0 2rem 0rem auto;
+}
+
+.left-btn,
+.right-btn {
+	position: relative;
+	display: inline-block;
+	width: 7rem;
+	height: 7rem;
+	border-radius: 50%;
+	border: 1px solid #555;
+}
+
+.left-btn:before,
+.right-btn:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 30%;
+	height: 25%;
+	background: url(../img/slide/ico_slide01.svg) 0 0 no-repeat;
+	background-size: contain;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.left-btn {
+	margin-right: 1rem;
+}
+
+.right-btn:before {
+	background-image: url(../img/slide/ico_slide02.svg);
+	left: 58%;
+}
+
 .mv__waves {
 	position: relative;
 	bottom: -35rem;
@@ -781,6 +913,8 @@ img.is-sp {
 
 .post .postThumb img {
 	width: 100%;
+	object-fit: cover;
+	height: 80vh;
 }
 
 .postBody p {

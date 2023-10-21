@@ -23,7 +23,7 @@
   
   
   <ul class="catsList catsList--single">
-    <li class="catsList__item">プログラミング</li>
+    <li class="catsList__item"><?php the_category(); ?></li>
   </ul>
 
 

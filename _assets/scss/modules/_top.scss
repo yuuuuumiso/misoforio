@@ -191,16 +191,117 @@
         background: #0e7dc7;
         margin:0 0.5rem 1rem 0;
         @include m.mq(sp) {
-            font-size: 1.7rem;            
+            font-size: 1.7rem;
         }
     }
 }
 
 
+// works
+.worksBody{
+    overflow: hidden;
+    padding: 0 0 0 12vw;
+    position: relative;
+}
+
+.worksItems{
+    &__ttl{
+    font-weight: bold;
+    font-size: 2.4rem;
+    }
+    &__wrap{
+    padding: 3rem 0 3rem 2rem;
+    }
+    &__item{
+        font-size: 2rem;
+        padding:0 0 3rem 0;
+        position: relative;
+    width: 30vw;
+    margin-right: 5vw;
+    vertical-align: top;
+    box-shadow: 0px 0px 15px -5px #777777;
+    margin: 0 0 3rem;
+    border-radius: 10px;
+  }
+  &__image{
+    img{
+    border-radius: 10px 10px 0 0;
+    object-fit: cover; 
+    height: 20vh;
+    }
+  }
+  &__body{
+    padding: 2rem;
+  }
+  &__date{
+    font-size: 2.2rem;
+  }
+}
+.swiper-container{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.swiper-slide{ 
+    height: auto; 
+a{
+    display: block;
+    background: #ffffff;
+    border-radius: 10px;
+}
+}
+
+/* 前に戻る画像パス */
+.slide-btn{
+    display: flex;
+    // position: absolute;
+    // top: 105px;
+    // right: 8.5%;
+    // bottom: auto;
+    // left: auto;
+    width: 18rem;
+    margin:0 2rem 0rem auto;
+    // text-align: left;
+    // z-index: 100;
+}
+.left-btn,.right-btn {
+    position: relative;
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 1px solid #555;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        height: 25%;
+        background: url(../img/slide/ico_slide01.svg) 0 0 no-repeat;
+        background-size: contain;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+.left-btn{
+    margin-right: 1rem;
+}
+.right-btn{
+    &:before {
+        background-image: url(../img/slide/ico_slide02.svg);
+        left: 58%;
+    }
+}
 
 
 
-
+// waves
 .mv__waves {
     position: relative;
     bottom: -35rem;
@@ -216,3 +317,5 @@
 .parallax>use {
 animation: move-forever 6s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
+
+

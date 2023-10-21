@@ -24,7 +24,7 @@
     position: relative;
     line-height: 1;
     font-family: "Lato";
-    letter-spacing: 5px;
+    letter-spacing: 3px;
         background:no-repeat url('../img/bg_ttl01.png') left center / auto 60%;
         @include m.mq(sp) {
           font-size: 12rem;
@@ -224,5 +224,33 @@ button:hover, .button:hover {
       vertical-align: middle;
   }
   }
+}
+
+/*デフォルトのマウスカーソルを非表示にする*/
+// html,body,a{cursor: none;}
+
+/*独自のマウスカーソルを作成*/
+.cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 4;
+  transition: width 0.2s, height 0.2s, top 0.2s, left 0.2s;
+  transition-timing-function: ease;
+  transform: translate(0, 0);
+  pointer-events: none;
+}
+
+/*aタグにホバーした時に見た目変化*/
+.cursor.cursor--hover {
+  top: -20px;
+  left: -20px;
+  width: 60px;
+  height: 60px;
+  background: rgba(15, 125, 200, 0.7);
 }
 

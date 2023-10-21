@@ -1,6 +1,4 @@
-@use './c-title';
 @use 'mixin' as m;
-
 
 .wrap--single{
 background-color:#ffffff;
@@ -67,8 +65,10 @@ color: #6C9FCE; /*アイコン色*/
   margin-bottom: 5rem;
   img{
     width: 100%;
+      object-fit: cover; 
+      height: 80vh;
   }
-}
+ }
 }
 
 .postBody{

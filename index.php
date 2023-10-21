@@ -27,6 +27,80 @@
 </section>
 
 
+
+
+
+
+
+<section class="sec works">
+  <div class="sec__inner">
+    <div class="sec__ttlBox">
+      <h2 class="sec__ttl">W<span class="sec__ttl--small">orks</span></h2>
+      <p class="sec__ttl-sub">作品集</p>
+    </div>
+  </div>
+
+
+
+<div class="worksBody">
+
+
+    <!-- カスタムボタン -->
+<div class="slide-btn">
+<a href="" class="left-btn swiper-left-btn" tabindex="0" role="button" aria-label="Next slide"></a>
+<a href="" class="right-btn swiper-right-btn" tabindex="0" role="button" aria-label="Previous slide"></a>
+</div>
+
+<div class="worksItems swiper-container">
+<div class="worksItems__wrap swiper-wrapper">
+<?php
+$args = array(//サブクエリは専用のphpに書くか、関数化する
+'post_type' => 'works',//投稿タイプ
+'post_status' => 'publish',//公開済み
+'posts_per_page' => 6, /* 表示する数 */
+'orderby'        => 'date',//投稿日時
+'order'          => 'DESC',//降順
+'has_password' => false,
+//'category_name' => 'programming',//特定のカテゴリ
+); ?>
+
+<?php $my_query = new WP_Query( $args ); ?>
+<?php if( $my_query->have_posts() ) : ?>
+<?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+<div class="worksItems__item swiper-slide">
+<a href="<?php the_permalink(); ?>">
+<div class="worksItems__image"><?php the_post_thumbnail();?></div>
+<div class="worksItems__body">
+<div class="worksItems__date"><?php the_time( 'Y/n/j' ); ?></div>
+<h3 class="worksItems__ttl"><?php echo the_title(); ?></h3>
+</div>
+</a>
+</div>
+<?php endwhile;?>
+<?php endif;?>
+<?php wp_reset_postdata();?>
+</div>
+
+    <!-- ページネーション（※省略可） -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <!-- ナビゲーションボタン（※デフォルトのやつ。今回はカスタム）
+    <div class="swiper-button-prev"></div> 
+    <div class="swiper-button-next"></div>
+    --> 
+    <!-- スクロールバー（※省略可） --> 
+    <!-- <div class="swiper-scrollbar"></div>  -->
+
+</div>
+</div>
+
+
+</section>
+
+
+
+
+
+
 <section class="sec skill">
   <div class="sec__inner">
     <div class="sec__ttlBox">
@@ -45,6 +119,10 @@
   </div>
 </section>
 
+
+
+
+
 <section class="sec blog">
   <div class="sec__inner">
     <div class="sec__ttlBox">
@@ -53,10 +131,6 @@
     </div>
     <div class="blogBox">
       <ul class="blogLists">
-
-
-
-
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
     <li class="blogList">
@@ -65,7 +139,7 @@
           <div class="blogList__body">
             <p class="blogList__date"><?php the_time( 'Y/n/j' ); ?></p>
             <ul class="catsList">
-              <li class="catsList__item">ここは動的に入れます</li>
+              <li class="catsList__item"><?php $cat = get_the_category(); ?><?php $cat = $cat[0]; ?><?php echo get_cat_name($cat->term_id); ?></li>
             </ul>
             <p class="blogList__ttl"><?php the_title(); ?></p>
           </div>
@@ -77,6 +151,19 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <?php get_footer(); ?>
