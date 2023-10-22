@@ -129,43 +129,53 @@
   border-radius:6px 6px 0px 0px;
   color:#FAFAFA;
 }
-input {
-  margin-bottom:10px;
+p,.wpcf7-response-output{
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
 }
-textarea {
-  height:100px;
-  margin-bottom:10px;
-}
-input:first-of-type
-{
-  margin-top:3rem;
-}
-input, textarea {
-  font-size: 1em;
+input,textarea {
   padding: 15px 10px 10px;
   background: #ffffff;
-  color:#FAFAFA;
   border-radius: 5px;
   background-clip: padding-box;
   box-sizing: border-box;
   width: 100%;
+  color: #333;
 }
-button {
-  margin-top:15px;
-  margin-bottom:25px;
-  background-color:#2ABCA7;
-  padding: 12px 45px;
-  border-radius: 5px;
-  border: 1px solid #2ABCA7;
-  transition: .5s;
-  display: inline-block;
-  cursor: pointer;
-  width:30%;
-  color:#fff;
-}
-button:hover, .button:hover {
-  background:#19a08c;
-}
+// textarea {
+//   height:100px;
+//   margin-bottom:10px;
+// }
+// input:first-of-type
+// {
+//   margin-top:3rem;
+// }
+// input, textarea {
+//   font-size: 1em;
+//   padding: 15px 10px 10px;
+//   background: #ffffff;
+//   color:#FAFAFA;
+//   border-radius: 5px;
+//   background-clip: padding-box;
+//   box-sizing: border-box;
+//   width: 100%;
+// }
+// button {
+//   margin-top:15px;
+//   margin-bottom:25px;
+//   background-color:#2ABCA7;
+//   padding: 12px 45px;
+//   border-radius: 5px;
+//   border: 1px solid #2ABCA7;
+//   transition: .5s;
+//   display: inline-block;
+//   cursor: pointer;
+//   width:30%;
+//   color:#fff;
+// }
+// button:hover, .button:hover {
+//   background:#19a08c;
+// }
 }
 
 
@@ -187,7 +197,7 @@ button:hover, .button:hover {
   &--single{
     margin-bottom: 2rem;
     #{$this}__item{
-    font-size: 1.6rem; 
+    font-size: 2rem; 
     }
   }
 }

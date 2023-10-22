@@ -202,15 +202,25 @@
     overflow: hidden;
     padding: 0 0 0 12vw;
     position: relative;
+    @include m.mq(sp) {
+        padding: 0rem 0 0vw;
+      }
 }
 
 .worksItems{
+    @include m.mq(sp) {
+        padding: 6rem 0;
+      }
+      
     &__ttl{
     font-weight: bold;
     font-size: 2.4rem;
     }
     &__wrap{
-    padding: 3rem 0 3rem 2rem;
+    padding: 5rem 0 3rem 3rem;
+    @include m.mq(sp) {
+        padding: 3rem 0 3rem 2rem;
+      }
     }
     &__item{
         font-size: 2rem;
@@ -222,6 +232,11 @@
     box-shadow: 0px 0px 15px -5px #777777;
     margin: 0 0 3rem;
     border-radius: 10px;
+    &:hover{ 
+        @include m.mq(pc) {
+          transform: scale(1.05); /* PC専用のMQを作成する */
+        }
+    }
   }
   &__image{
     img{
@@ -247,15 +262,36 @@
     z-index: 1;
 }
 .swiper-slide{ 
-    height: auto; 
-a{
+    height: auto;
+    transition:transform .5s,opacity .5s;
+    a{
     display: block;
     background: #ffffff;
     border-radius: 10px;
 }
 }
+.worksItems__item.swiper-slide.swiper-slide-active{
+    @include m.mq(sp) {
+    transform: scale(1.2); /* スライドの大きさ調整 */
+    }
+}
 
-/* 前に戻る画像パス */
+// hoverアクション
+// .worksItems__item{
+//     &:hover{ 
+//         transform: scale(1.1); /* PC専用のMQを作成する */
+//     }
+// }
+
+.swiper-container:hover {
+    .swiper-slide:not(:hover) {
+        @include m.mq(pc) {
+        opacity: .3;
+        }
+    }
+}
+
+
 .slide-btn{
     display: flex;
     // position: absolute;
@@ -264,7 +300,7 @@ a{
     // bottom: auto;
     // left: auto;
     width: 18rem;
-    margin:0 2rem 0rem auto;
+    margin:0 0rem 0rem auto;
     // text-align: left;
     // z-index: 100;
 }

@@ -11,8 +11,6 @@ var theSwiper = new Swiper('.worksItems', {
     loop: true,//繰り返し
     direction: 'horizontal',//横
     //slidesPerView: 'auto',//幅を決め打ちする時に使う
-    slidesPerView: 3.5, // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
-    spaceBetween: 30, // スライド間の余白（px）
 //    centeredSlides: true, // アクティブなスライドを中央に配置する
 //    loop: true,  // 無限ループさせる
 //    loopAdditionalSlides: 1, // 無限ループさせる場合に複製するスライド数
@@ -45,8 +43,21 @@ var theSwiper = new Swiper('.worksItems', {
     //   disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
     //   waitForTransition: false, // アニメーションの間も自動再生を止めない（最初のスライドの表示時間を揃えたいときに）
     // },
-
-  })
+    breakpoints: {
+      // スライドの表示枚数：600px以上の場合
+      0: {
+        slidesPerView: 1.8,
+        centeredSlides: true, // アクティブなスライドを中央に配置する
+        spaceBetween: 50, // スライド間の余白（px）
+      },
+      // スライドの表示枚数：768px以上の場合
+      768: {
+        slidesPerView: 3.5,
+        centeredSlides: false, // アクティブなスライドを中央に配置する
+        spaceBetween: 40, // スライド間の余白（px）
+      }
+    },
+  });
 
 
 

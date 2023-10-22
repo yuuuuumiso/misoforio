@@ -40,15 +40,22 @@
   </ul>
   
   <ul class="postSnsLinks">
-  <li class="postSnslinks__item"><a href=""></a></li>
-  <li class="postSnslinks__item"><a href=""></a></li>
+  <li class="postSnslinks__item"><a href="">SNS</a></li>
+  <li class="postSnslinks__item"><a href="">SNS</a></li>
   </ul>
   
-  <div class="postBreadCrumb">
-  <div class="postBreadCrumb__prev">＜＜＜</div>
-  <div class="postBreadCrumb__next">＞＞＞</div>
-  </div>
-  
+
+  <div class="postLinks">
+<?php if (get_previous_post()): ?>
+<div class="postLinks__item prev"><?php previous_post_link(); ?></div>
+<?php endif; ?>
+<?php if (get_next_post()): ?>
+<div class="postLinks__item next"><?php next_post_link(); ?></div>
+<?php endif; ?>
+</div>
+
+
+
   </div>
   </article>
   </main>

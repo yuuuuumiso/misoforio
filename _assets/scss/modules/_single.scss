@@ -6,7 +6,7 @@ background-color:#ffffff;
 .post{
 padding: 20rem 0 20rem;
 @include m.mq(sp) {
-  padding:20rem 5rem 20rem;
+  padding:20rem 2.5rem 20rem;
 }
 }
   .single-post{
@@ -25,6 +25,9 @@ padding: 20rem 0 20rem;
         font-size: 4.4rem;
         color: #333;
         font-weight: 600;
+        @include m.mq(sp) {
+          font-size: 3.6rem;
+        }
     }
     h2{
       margin-bottom: 2.2rem;
@@ -34,13 +37,19 @@ padding: 20rem 0 20rem;
       color: #494949;/*文字 色*/
       background: transparent;/*背景透明に*/
       border-left: solid 5px #7db4e6;/*左線*/
-  }
+      @include m.mq(sp) {
+        font-size: 3.2rem;
+      }
+    }
   h3{
     border-bottom: solid 3px #7db4e6;
     margin-bottom: 2rem;
     font-size: 3.0rem;
     font-weight: 600;
     padding: 0.25em 0;/*上下 左右の余白*/
+    @include m.mq(sp) {
+      font-size: 3rem;
+    }
   }
 h4{
   margin-bottom: 1.6rem;
@@ -56,6 +65,9 @@ left: 0;/*アイコンの位置*/
 top: 0;/*アイコンの位置*/
 color: #6C9FCE; /*アイコン色*/
   }
+  @include m.mq(sp) { 
+    font-size: 2.8rem;
+  }
 }
 .postData{
   font-size: 2.2rem;
@@ -67,6 +79,9 @@ color: #6C9FCE; /*アイコン色*/
     width: 100%;
       object-fit: cover; 
       height: 80vh;
+      @include m.mq(sp) {
+        height: 30vh;
+      }
   }
  }
 }
@@ -75,5 +90,17 @@ color: #6C9FCE; /*アイコン色*/
   p{
     margin-bottom: 2.2rem;
     font-size: 2.2rem;
+  }
+}
+
+.postLinks{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__item{
+    a{
+      display: block;
+      font-size: 1.8rem;
+    }
   }
 }

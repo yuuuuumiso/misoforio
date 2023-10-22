@@ -17,8 +17,9 @@
       <p class="sec__ttl-sub">ご連絡</p>
     </div>
 
+    <?php echo do_shortcode('[contact-form-7 id="b25a1d8" title="コンタクトフォーム 1"]'); ?>
 
-    <form id="contact">
+    <!-- <form id="contact">
       <div class="container">
         <input type="text" name="name" placeholder="Name" /><input  type="email" name="email" placeholder="Email" /><textarea type="text" name="message" placeholder="Message"></textarea><br />
         <div class="message">Message Sent</div>
@@ -26,7 +27,7 @@
           Send!
         </button>
       </div>
-    </form>
+    </form> -->
 
   </div>
 </section>

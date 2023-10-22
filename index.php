@@ -141,7 +141,7 @@ $args = array(//サブクエリは専用のphpに書くか、関数化する
             <ul class="catsList">
               <li class="catsList__item"><?php $cat = get_the_category(); ?><?php $cat = $cat[0]; ?><?php echo get_cat_name($cat->term_id); ?></li>
             </ul>
-            <p class="blogList__ttl"><?php the_title(); ?></p>
+            <p class="blogList__ttl"><?php echo wp_trim_words( get_the_title(), 32, '...' ); ?></p>
           </div>
          </a>
         </li>

@@ -453,48 +453,21 @@ img.is-sp {
 	color: #FAFAFA;
 }
 
-.sec.contact input {
-	margin-bottom: 10px;
-}
-
-.sec.contact textarea {
-	height: 100px;
-	margin-bottom: 10px;
-}
-
-.sec.contact input:first-of-type {
-	margin-top: 3rem;
+.sec.contact p,
+.sec.contact .wpcf7-response-output {
+	font-size: 2.6rem;
+	margin-bottom: 2rem;
 }
 
 .sec.contact input,
 .sec.contact textarea {
-	font-size: 1em;
 	padding: 15px 10px 10px;
 	background: #ffffff;
-	color: #FAFAFA;
 	border-radius: 5px;
 	background-clip: padding-box;
 	box-sizing: border-box;
 	width: 100%;
-}
-
-.sec.contact button {
-	margin-top: 15px;
-	margin-bottom: 25px;
-	background-color: #2ABCA7;
-	padding: 12px 45px;
-	border-radius: 5px;
-	border: 1px solid #2ABCA7;
-	transition: 0.5s;
-	display: inline-block;
-	cursor: pointer;
-	width: 30%;
-	color: #fff;
-}
-
-.sec.contact button:hover,
-.sec.contact .button:hover {
-	background: #19a08c;
+	color: #333;
 }
 
 .catsList__item {
@@ -512,7 +485,7 @@ img.is-sp {
 }
 
 .catsList--single .catsList__item {
-	font-size: 1.6rem;
+	font-size: 2rem;
 }
 
 .btn01 {
@@ -736,7 +709,7 @@ img.is-sp {
 }
 
 .worksItems__wrap {
-	padding: 3rem 0 3rem 2rem;
+	padding: 5rem 0 3rem 3rem;
 }
 
 .worksItems__item {
@@ -777,6 +750,7 @@ img.is-sp {
 
 .swiper-slide {
 	height: auto;
+	transition: transform 0.5s, opacity 0.5s;
 }
 
 .swiper-slide a {
@@ -785,12 +759,10 @@ img.is-sp {
 	border-radius: 10px;
 }
 
-/* 前に戻る画像パス */
-
 .slide-btn {
 	display: flex;
 	width: 18rem;
-	margin: 0 2rem 0rem auto;
+	margin: 0 0rem 0rem auto;
 }
 
 .left-btn,
@@ -920,6 +892,29 @@ img.is-sp {
 .postBody p {
 	margin-bottom: 2.2rem;
 	font-size: 2.2rem;
+}
+
+.postLinks {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.postLinks__item a {
+	display: block;
+	font-size: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+
+.worksItems__item:hover {
+	transform: scale(1.05); /* PC専用のMQを作成する */
+}
+
+.swiper-container:hover .swiper-slide:not(:hover) {
+	opacity: 0.3;
+}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1054,13 +1049,49 @@ body {
 	font-size: 1.7rem;
 }
 
+.worksBody {
+	padding: 0rem 0 0vw;
+}
+
+.worksItems {
+	padding: 6rem 0;
+}
+
+.worksItems__wrap {
+	padding: 3rem 0 3rem 2rem;
+}
+
+.worksItems__item.swiper-slide.swiper-slide-active {
+	transform: scale(1.2); /* スライドの大きさ調整 */
+}
+
 .mv__waves {
 	bottom: -14rem;
 	margin-top: -10rem;
 }
 
 .post {
-	padding: 20rem 5rem 20rem;
+	padding: 20rem 2.5rem 20rem;
+}
+
+.post h1.postTtl01 {
+	font-size: 3.6rem;
+}
+
+.post h2 {
+	font-size: 3.2rem;
+}
+
+.post h3 {
+	font-size: 3rem;
+}
+
+.post h4 {
+	font-size: 2.8rem;
+}
+
+.post .postThumb img {
+	height: 30vh;
 }
 
 }
