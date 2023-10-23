@@ -20,7 +20,7 @@
           <ul class="aboutBox__snsLists">
             <li class="aboutBox__snsList"><a href="https://twitter.com/shiromisooo"><img src="<?php echo get_template_directory_uri(); ?>/img/ico_tw.svg"></a></li>
             <li class="aboutBox__snsList"><a href="https://www.instagram.com/misomisomisoooo/"><img src="<?php echo get_template_directory_uri(); ?>/img/ico_ig.svg"></a></li>
-          </ul>  
+          </ul>
       </div>
     </div>
   </div>
