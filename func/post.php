@@ -32,9 +32,15 @@ function breadcrumb() {
   echo $home;
   the_archive_title('<li>', '</li>');
   }
+  //カスタム投稿「works」 だったら
+  else  if (is_singular('works')){
+    echo $home;
+    the_archive_title('<li>', '</li>');
+  }
   // 投稿ページ
   else if ( is_single() ) {
-  $cat = get_the_category();
+  $cat = get_the_category();//カスタム投稿だとこれは効かないのでワーニングが出る
+  //var_dump($cat);
       if( isset($cat[0]->cat_ID) ) $cat_id = $cat[0]->cat_ID;
       $cat_list = array();
       while ($cat_id != 0){
