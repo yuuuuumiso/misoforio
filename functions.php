@@ -128,7 +128,7 @@ function create_post_type() {
       'label' => '作品ジャンル', // 表示名称
       'public' => true, // 管理画面に表示するかどうかの指定
       'hierarchical' => true, // 階層を持たせるかどうか
-      'show_in_rest' => true, // REST APIの有効化。ブロックエディタの有効化。
+      'show_in_rest' => true, // REST APIの有効化。ブロックエディタの有効化
     )
   );
 }

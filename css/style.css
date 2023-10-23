@@ -316,6 +316,10 @@ img.is-sp {
 	animation-delay: 1.1s;
 }
 
+#g-nav li:nth-of-type(6) {
+	animation-delay: 1.3s;
+}
+
 .g-nab-bg {
 	position: fixed;
 	top: 0;
