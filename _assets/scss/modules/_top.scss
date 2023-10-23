@@ -81,6 +81,16 @@
     }
     &__snsList{
         margin:0 1rem 0 0 ;
+        width: 6rem;
+        @include m.mq(sp) {
+            width: 7rem;
+        }
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
     }
 }
 .skillBox{

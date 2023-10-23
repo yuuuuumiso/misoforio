@@ -18,8 +18,8 @@
         <p class="aboutBox__desc">1990年生まれ。大学を卒業後営業職に従事するも職場でのパワハラに合いメンタル崩壊前に逃亡。<br><br>その後は東南アジアを放浪し、職業訓練校にてWeb制作を学ぶ。
           卒業後は制作会社でコーダーを経験。現在はメーカーでWeb担当として「コーディング・デザイン・マーケティング」を担当。<br><br>個人では月間PVは3.5万の「味噌ブログ」を運営。並行して運用しているnoteは11万アクセスを突破。</p>
           <ul class="aboutBox__snsLists">
-            <li class="aboutBox__snsList"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/ico_ig.svg"></a></li>
-            <li class="aboutBox__snsList"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/ico_tw.svg"></a></li>
+            <li class="aboutBox__snsList"><a href="https://twitter.com/shiromisooo"><img src="<?php echo get_template_directory_uri(); ?>/img/ico_tw.svg"></a></li>
+            <li class="aboutBox__snsList"><a href="https://www.instagram.com/misomisomisoooo/"><img src="<?php echo get_template_directory_uri(); ?>/img/ico_ig.svg"></a></li>
           </ul>  
       </div>
     </div>

@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <?php wp_head(); ?>
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VRLGZ01DVB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VRLGZ01DVB');
+</script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php wp_head(); ?>
 </head>
 <body>
 <div class="wrap">
@@ -15,10 +24,11 @@
   <nav id="g-nav" class="">
     <div id="g-nav-list">
     <ul>
-    <li><a href="#">Top</a></li>	
+    <li><a href="<?php echo esc_url( home_url() ); ?>">Top</a></li>	
     <li><a href="#">About</a></li>
+    <li><a href="<?php echo esc_url( home_url() ); ?>/works/">Works</a></li>
     <li><a href="#">Skills</a></li>	
-    <li><a href="#">Blog</a></li>
+    <li><a href="<?php echo esc_url( home_url() ); ?>/blog/">Blog</a></li>
     <li><a href="#">Contact</a></li>	
     </ul>
     </div>
