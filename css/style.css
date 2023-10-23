@@ -342,7 +342,9 @@ img.is-sp {
 	transition: 0.3s ease;
 }
 
-/* container */
+.breadCrumb {
+	font-size: 5rem;
+}
 
 /*head end*/
 
@@ -489,7 +491,7 @@ img.is-sp {
 }
 
 .catsList--single .catsList__item {
-	font-size: 2rem;
+	font-size: 1.7rem;
 }
 
 .btn01 {
@@ -907,15 +909,24 @@ img.is-sp {
 	font-size: 2.2rem;
 }
 
-.postLinks {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.postLinks__item {
+	font-size: 2.8rem;
 }
 
 .postLinks__item a {
-	display: block;
-	font-size: 1.8rem;
+	display: inline-block;
+}
+
+.postSnsLinks {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.postSnsLinks__item a {
+	margin: 0 1rem 2rem;
+	font-size: 2.8rem;
+	display: inline-block;
 }
 
 @media screen and (min-width: 768px) {

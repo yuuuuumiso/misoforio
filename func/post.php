@@ -6,7 +6,7 @@
 function breadcrumb() {
   $home = '<li><a href="'.get_bloginfo('url').'" >HOME</a></li>';
 
-  echo '<ul>';
+  echo '<ul class="breadCrumb">';
   if ( is_front_page() ) {
       // トップページの場合は表示させない
   }
@@ -71,6 +71,11 @@ add_filter( 'get_the_archive_title', function ($title) {
   }
   return $title;
 });
+
+
+
+
+
 
 
 //通常投稿blogのURLを/ドメイン/記事名⇒/ドメイン/blog/記事名。パーマリンクを更新しないと反映されない：https://fundemic.jp/blog/the-tohr-archive/

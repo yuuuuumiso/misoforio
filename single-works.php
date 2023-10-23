@@ -38,6 +38,8 @@
 
  
   
+  <?php get_template_part( 'template-parts/tpl', 'snslist' ); ?>
+  <?php get_template_part( 'template-parts/tpl', 'pagenation' ); ?>
 
 
 

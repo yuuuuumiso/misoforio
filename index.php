@@ -147,7 +147,7 @@ $args = array(//サブクエリは専用のphpに書くか、関数化する
         </li>
         <?php endwhile; endif; ?>
         </ul>
-        <p class="btn01"><a href="">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png" alt=""></a></p>
+        <p class="btn01"><a href="<?php echo home_url(); ?>/blog/">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png" alt=""></a></p>
     </div>
   </div>
 </section>

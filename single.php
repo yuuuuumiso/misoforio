@@ -33,28 +33,11 @@
   <div class="postBody">
   <?php the_content(); ?>
   </div>
-  
-
-  <ul class="postLists">
-  <li class="postList">list</li>
-  </ul>
-  
-  <ul class="postSnsLinks">
-  <li class="postSnslinks__item"><a href="">SNS</a></li>
-  <li class="postSnslinks__item"><a href="">SNS</a></li>
-  </ul>
-  
-
-  <div class="postLinks">
-<?php if (get_previous_post()): ?>
-<div class="postLinks__item prev"><?php previous_post_link(); ?></div>
-<?php endif; ?>
-<?php if (get_next_post()): ?>
-<div class="postLinks__item next"><?php next_post_link(); ?></div>
-<?php endif; ?>
-</div>
 
 
+
+  <?php get_template_part( 'template-parts/tpl', 'snslist' ); ?>
+  <?php get_template_part( 'template-parts/tpl', 'pagenation' ); ?>
 
   </div>
   </article>
