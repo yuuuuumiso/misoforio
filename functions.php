@@ -1,5 +1,9 @@
 <?php
 
+//パーツ呼び出し
+require_once get_theme_file_path( './func/post.php' ); //基本の設定
+
+
 //WP基本設定
 function themeSetup() {
  
@@ -128,3 +132,10 @@ function create_post_type() {
     )
   );
 }
+
+
+
+
+
+
+
