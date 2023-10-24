@@ -37,7 +37,7 @@ function breadcrumb() {
     echo $home;
     the_archive_title('<li>', '</li>');
   }
-  // 投稿ページ
+  // 投稿ページ「blog」
   else if ( is_single() ) {
   $cat = get_the_category();//カスタム投稿だとこれは効かないのでワーニングが出る
   //var_dump($cat);
@@ -46,7 +46,7 @@ function breadcrumb() {
       while ($cat_id != 0){
           $cat = get_category( $cat_id );
           $cat_link = get_category_link( $cat_id );
-          array_unshift( $cat_list, '<li><a href="'.$cat_link.'">'.$cat->name.'</a></li>' );
+          array_unshift( $cat_list, '<li><a href="'.$cat_link.'">'.$cat->name.'</a></li> ' );
           $cat_id = $cat->parent;
       }
       foreach($cat_list as $value){

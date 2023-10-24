@@ -14,7 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <div class="wrap">
   <header class="header">
   <div class="header__inner">
@@ -25,11 +26,11 @@
     <div id="g-nav-list">
     <ul>
     <li><a href="<?php echo esc_url( home_url() ); ?>">Top</a></li>	
-    <li><a href="#">About</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="<?php echo esc_url( home_url() ); ?>/works/">Works</a></li>
-    <li><a href="#">Skills</a></li>	
+    <li><a href="#skills">Skills</a></li>	
     <li><a href="<?php echo esc_url( home_url() ); ?>/blog/">Blog</a></li>
-    <li><a href="#">Contact</a></li>	
+    <li><a href="#contact">Contact</a></li>	
     </ul>
     </div>
     </nav>
@@ -40,4 +41,3 @@
 
 
 
-<?php breadcrumb(); ?>

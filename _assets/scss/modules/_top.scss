@@ -162,6 +162,7 @@
     background: #ffffff;
     @include m.mq(sp) {
         width: 100%;
+        margin: 0 0 5rem;
     }
     .blogList__link{
         padding: 2rem;
@@ -174,6 +175,10 @@
     }
     &__img{
         width: 30%;
+        img{
+            object-fit: cover;
+            width: 100%;
+        }
     }
     &__body{
         width: 66%;
@@ -252,8 +257,11 @@
     img{
     border-radius: 10px 10px 0 0;
     object-fit: cover; 
-    height: 20vh;
-    }
+    height: 25vh;
+    @include m.mq(sp) {
+        height: 20vh;
+        }
+}
   }
   &__body{
     padding: 2rem;

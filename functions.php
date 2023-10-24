@@ -3,11 +3,9 @@
 //パーツ呼び出し
 require_once get_theme_file_path( './func/post.php' ); //基本の設定
 
-
 //WP基本設定
 function themeSetup() {
- 
-//サムネイル利用
+ //サムネイル利用
     add_theme_support('post-thumbnails');
  
     //タイトルタグ
@@ -36,36 +34,41 @@ function my_document_title_separator($separator){
 }
 
 
+/**
+ * bodyタグ開始に挿入
+ */
+add_action( 'wp_body_open', function() {
+	?>
+	<!-- ここから挿入したいソースコードなどスタート -->
+	<!-- ここまで -->
+	<?php
+});
 
+// css js をhead内ではなく、function.phpから動的に読み込むパターン
 
-
-
-
-
-
-
-
-
-
-
-// cssをhead内ではなく、function.phpから動的に読み込むパターン
-
-//テーマディレクトリまでのパスを定数にしておくと便利です
+//テーマディレクトリまでのパスを定数にしておく
 define("DIRE", get_template_directory_uri());
+define("PATH", get_template_directory());
 
 function add_files(){
 
-    //css読み込み
-//    wp_enqueue_style('notosansjp','http://fonts.googleapis.com/earlyaccess/notosansjp.css');
-//    wp_enqueue_style('lato','https://fonts.googleapis.com/css?family=Lato');
+//css読み込み
+//wp_enqueue_style('notosansjp','http://fonts.googleapis.com/earlyaccess/notosansjp.css');
+//wp_enqueue_style('lato','https://fonts.googleapis.com/css?family=Lato');
 // 上記ではiPhoneで反映されなかった
 wp_enqueue_style('googlefonts', "https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap", array(), null );
-wp_enqueue_style(
-  "swiper-css",
-  "https://unpkg.com/swiper@8/swiper-bundle.min.css"
-);
-// wp_enqueue_style( 'swiper-css' );
-wp_enqueue_style('my_style',DIRE.'/css/style.css');
+wp_enqueue_style("swiper-css","https://unpkg.com/swiper@8/swiper-bundle.min.css");
+//wp_enqueue_style( 'swiper-css' );
+//wp_enqueue_style('my_style',DIRE.'/css/style.css');
+//wp_enqueue_style('style', DIRE.'/css/style.css', array(), date('YmdGis', filemtime(get_template_directory().'/css/style.css')));//パラメータ付与
+
+//関数wp_cssを定義する
+function wp_css($css_name, $file_path){
+  wp_enqueue_style($css_name, DIRE.$file_path, array(), date('YmdGis', filemtime(PATH.$file_path)));
+}
+//関数wp_cssの第一引数へスタイルシートのid名'style'、第二引数へスタイルシートのパス'/css/style.css'を引き渡して実行する
+wp_css('style', '/css/style.css');
+
 
     //WP本体のjQuery+jsファイルを読み込む
     wp_enqueue_script('jquery');
@@ -112,6 +115,7 @@ function create_post_type() {
       'has_archive' => true, // 投稿した記事の一覧ページを作成する
       'menu_position' => 5, // 管理画面メニューの表示位置（投稿の下に追加）
       'show_in_rest' => true, // Gutenbergの有効化
+      'menu_icon' => 'dashicons-smiley',//アイコン
       'supports' => array( // サポートする機能（以下）
         'title',  // タイトル
         'editor', // エディター
