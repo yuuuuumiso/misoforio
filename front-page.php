@@ -1,0 +1,175 @@
+<?php get_header(); ?>
+
+<div class="mv">
+  <div class="mv__logo">Miso's<br>PORTFOLIO</div>
+  <div class="mv__img"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_img03.png"></div>
+</div>
+
+<section class="sec about">
+  <div class="sec__inner">
+    <div class="sec__ttlBox">
+      <h2 class="sec__ttl">A<span class="sec__ttl--small">bout</span></h2>
+      <p class="sec__ttl-sub">わたしについて</p>
+    </div>
+    <div class="aboutBox">
+      <div class="aboutBox__img"><img src="<?php echo get_template_directory_uri(); ?>/img/about_img01.jpg"></div>
+      <div class="aboutBox__body">
+        <h3 class="aboutBoxTtl">Webコーダー / ブロガー<br><span>味噌</span></h3>
+        <p class="aboutBox__desc">1990年生まれ。大学を卒業後営業職に従事するも職場でのパワハラに合いメンタル崩壊前に逃亡。<br><br>その後は東南アジアを放浪し、職業訓練校にてWeb制作を学ぶ。
+          卒業後は制作会社でコーダーを経験。現在はメーカーでWeb担当として「コーディング・デザイン・マーケティング」を担当。<br><br>個人では月間PVは3.5万の「味噌ブログ」を運営。並行して運用しているnoteは11万アクセスを突破。</p>
+          <ul class="aboutBox__snsLists">
+            <li class="aboutBox__snsList"><a href="https://twitter.com/shiromisooo"><img src="<?php echo get_template_directory_uri(); ?>/img/ico_tw.svg"></a></li>
+            <li class="aboutBox__snsList"><a href="https://www.instagram.com/misomisomisoooo/"><img src="<?php echo get_template_directory_uri(); ?>/img/ico_ig.svg"></a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="sec works">
+  <div class="sec__inner">
+    <div class="sec__ttlBox">
+      <h2 class="sec__ttl">W<span class="sec__ttl--small">orks</span></h2>
+      <p class="sec__ttl-sub">作品集</p>
+    </div>
+  </div>
+
+
+
+<div class="worksBody">
+
+<div class="slide-btn">
+<a href="" class="left-btn swiper-left-btn" tabindex="0" role="button" aria-label="Next slide"></a>
+<a href="" class="right-btn swiper-right-btn" tabindex="0" role="button" aria-label="Previous slide"></a>
+</div>
+
+
+
+
+
+<!-- ここ関数化できるな -->
+<div class="worksItems swiper-container">
+<div class="worksItems__wrap swiper-wrapper">
+<?php
+$args = array(//サブクエリは専用のphpに書くか、関数化する
+'post_type' => 'works',//投稿タイプ
+'post_status' => 'publish',//公開済み
+'posts_per_page' => 6, /* 表示する数 */
+'orderby'        => 'date',//投稿日時
+'order'          => 'DESC',//降順
+'has_password' => false,
+//'category_name' => 'programming',//特定のカテゴリ
+); ?>
+<?php $my_query = new WP_Query( $args ); ?>
+<?php if( $my_query->have_posts() ) : ?>
+<?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+<div class="worksItems__item swiper-slide">
+<a href="<?php the_permalink(); ?>">
+<div class="worksItems__image"><?php the_post_thumbnail();?></div>
+<div class="worksItems__body">
+<div class="worksItems__date"><?php the_time( 'Y/n/j' ); ?></div>
+<h3 class="worksItems__ttl"><?php echo the_title(); ?></h3>
+</div>
+</a>
+</div>
+<?php endwhile;?>
+<?php endif;?>
+<?php wp_reset_postdata();?>
+</div>
+
+    <!-- ページネーション（※省略可） -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <!-- ナビゲーションボタン（※デフォルトのやつ。今回はカスタム）
+    <div class="swiper-button-prev"></div> 
+    <div class="swiper-button-next"></div>
+    --> 
+    <!-- スクロールバー（※省略可） --> 
+    <!-- <div class="swiper-scrollbar"></div>  -->
+
+</div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="sec skill">
+  <div class="sec__inner">
+    <div class="sec__ttlBox">
+      <h2 class="sec__ttl">S<span class="sec__ttl--small">kills</span></h2>
+      <p class="sec__ttl-sub">できること</p>
+    </div>
+    <div class="skillBox">
+      <div class="skillBox__inner">
+      <ul class="skillLists">
+        <li class="skillList"><h3 class="skillList__ttl">コーディング</h3><p class="skillList__ttl--sub">Cording</p><p class="skillList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/skill_ico01.svg"></p><p class="skillList__desc">html、css、jQueryを使用したコーディングができます。WordPressの組み込みも可能です。</p></li>
+        <li class="skillList"><h3 class="skillList__ttl">デザイン</h3><p class="skillList__ttl--sub">Design</p><p class="skillList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/skill_ico02.svg"></p><p class="skillList__desc">バナーやLPなどのデザインが可能です。Photoshop、Illustrator、Figmaなどのデザインソフトが利用できます。</p></li>
+        <li class="skillList"><h3 class="skillList__ttl">ライティング</h3><p class="skillList__ttl--sub">Writing</p><p class="skillList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/skill_ico03.svg"></p><p class="skillList__desc">3年以上運営しているブログの経験を活かしてWebライティングを行います。検索順位で1位を取った経験も数回あります。</p></li>
+      </ul>
+    </div>
+   </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="sec blog">
+  <div class="sec__inner">
+    <div class="sec__ttlBox">
+      <h2 class="sec__ttl">B<span class="sec__ttl--small">log</span></h2>
+      <p class="sec__ttl-sub">ブログ</p>
+    </div>
+    <div class="blogBox">
+      <ul class="blogLists">
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post(); ?>
+  <?php get_template_part( 'template-parts/loop', 'topblog' ); ?>
+  <!--     <li class="blogList">
+         <a class="blogList__link" href="<?php the_permalink(); ?>">
+          <p class="blogList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/blog_img01.png"></p>
+          <div class="blogList__body">
+            <p class="blogList__date"><?php the_time( 'Y/n/j' ); ?></p>
+            <ul class="catsList">
+              <li class="catsList__item"><?php $cat = get_the_category(); ?><?php $cat = $cat[0]; ?><?php echo get_cat_name($cat->term_id); ?></li>
+            </ul>
+            <p class="blogList__ttl"><?php echo wp_trim_words( get_the_title(), 32, '...' ); ?></p>
+          </div>
+         </a>
+        </li> -->
+        <?php endwhile; endif; ?>
+        </ul>
+        <p class="btn01"><a href="<?php echo home_url(); ?>/blog/">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png" alt=""></a></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php get_footer(); ?>
+
+
+
