@@ -26,7 +26,10 @@
   <?php get_template_part( 'template-parts/tpl', 'snsicon' ); ?>
   <?php get_template_part( 'template-parts/tpl', 'pagenation' ); ?>
   </div>
-  </article>
+
+  <?php get_sidebar(); ?>
+
+</article>
   </main>
 <?php
 endwhile;

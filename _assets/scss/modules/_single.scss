@@ -12,16 +12,27 @@ padding: 15rem 0 10rem;
 article.single-post{
   margin:0 auto 0;
   max-width: 152rem;
-  box-shadow: 0px 0px 15px -5px #777777;
-  border-radius: 10px;
   background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  @include m.mq(sp) {
+    flex-direction: column;
   }
+}
   .single-post__inner{
-  padding:5rem 5rem 15rem;
+    width: 108rem;
+    box-shadow: 0px 0px 15px -5px #777777;
+    border-radius: 10px;
+    padding:5rem 5rem 15rem;
+    @include m.mq(sp) {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
   }
 .post{
     h1.postTtl01{
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         font-size: 4.4rem;
         color: #333;
         font-weight: 600;
@@ -70,8 +81,8 @@ color: #6C9FCE; /*アイコン色*/
   }
 }
 .postData{
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .postThumb{
   margin-bottom: 5rem;
