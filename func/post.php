@@ -2,6 +2,8 @@
 <?php
 
 
+
+
 // パンくずリスト
 function breadcrumb() {
   $home = '<li><a href="'.get_bloginfo('url').'" >HOME</a></li>';
@@ -84,6 +86,25 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //通常投稿blogのURLを/ドメイン/記事名⇒/ドメイン/blog/記事名。パーマリンクを更新しないと反映されない：https://fundemic.jp/blog/the-tohr-archive/
 function post_has_archive( $args, $post_type ) {
     if ( 'post' == $post_type ) {
@@ -114,3 +135,7 @@ function post_has_archive( $args, $post_type ) {
     return $return_rule;
     }
     add_filter( 'post_rewrite_rules', 'add_article_post_rewrite_rules' );
+
+
+
+
