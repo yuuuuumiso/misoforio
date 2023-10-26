@@ -179,17 +179,17 @@ input,textarea {
 }
 
 
-
+//topのカテゴリ
 .catsList{
   $this:&;
   &__item{
     display: inline-block;
     vertical-align: top;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     padding: 0.5rem 1rem;
     color: #fff;
     background: #0e7dc7;
-    //margin: 0 0.5rem 1rem 0;
+    margin: 0 0.5rem 1rem 0;
     @include m.mq(sp) {
       font-size: 1.7rem;
     }
@@ -202,25 +202,8 @@ input,textarea {
   }
 }
 
-
-//topのカード
-.post-categories{
-  li{
-    display: inline-block;
-    vertical-align: top;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    background: #0e7dc7;
-    //margin: 0 0.5rem 1rem 0;
-    @include m.mq(sp) {
-      font-size: 1.7rem;
-    }
-  }
-}
-
 // worksのcat
-.catsList{
+.catsList.catsList--works{
   display: inline-block;
   vertical-align: top;
   font-size: 1.8rem;
@@ -232,6 +215,23 @@ input,textarea {
     font-size: 1.7rem;
   }
 }
+
+//singleのcat
+.post-categories{
+  li{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #0e7dc7;
+    //margin: 0 0.5rem 1rem 0;
+    @include m.mq(sp) {
+      font-size: 1.7rem;
+    }
+  }
+}
+
 
 
 

@@ -8,9 +8,10 @@
 
 <style>
     .archive{
-        font-size: 3rem;
+        font-size: 2rem;
     }
 </style>
+
 <main class="archive">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <article class="blog-list__list-item">
@@ -21,6 +22,6 @@
 <?php endwhile; endif; ?>
 </main>
 
-
+<p>index.php</p>
 
 <?php get_footer();?>

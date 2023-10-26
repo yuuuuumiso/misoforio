@@ -17,8 +17,8 @@
 <div class="single-post__inner">
   
 <div class="single-post__head">
-<div class="catsList"><?php echo get_the_terms(get_the_ID(), 'works-genre')[0]->name;?></div>
 <p class="postData"><?php echo get_the_date(); ?></p>
+<div class="catsList catsList--works"><?php echo get_the_terms(get_the_ID(), 'works-genre')[0]->name;?></div>
 <h1 class="postTtl01"><?php the_title(); ?></h1>
 <p class="postThumb"><?php the_post_thumbnail(); ?></p>
 </div>

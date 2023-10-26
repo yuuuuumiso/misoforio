@@ -475,10 +475,11 @@ img.is-sp {
 .catsList__item {
 	display: inline-block;
 	vertical-align: top;
-	font-size: 1.2rem;
+	font-size: 1.8rem;
 	padding: 0.5rem 1rem;
 	color: #fff;
 	background: #0e7dc7;
+	margin: 0 0.5rem 1rem 0;
 }
 
 .catsList--single {
@@ -489,16 +490,7 @@ img.is-sp {
 	font-size: 1.7rem;
 }
 
-.post-categories li {
-	display: inline-block;
-	vertical-align: top;
-	font-size: 1.2rem;
-	padding: 0.5rem 1rem;
-	color: #fff;
-	background: #0e7dc7;
-}
-
-.catsList {
+.catsList.catsList--works {
 	display: inline-block;
 	vertical-align: top;
 	font-size: 1.8rem;
@@ -506,6 +498,15 @@ img.is-sp {
 	color: #fff;
 	background: #0e7dc7;
 	margin: 0 0.5rem 1rem 0;
+}
+
+.post-categories li {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1.6rem;
+	padding: 0.5rem 1rem;
+	color: #fff;
+	background: #0e7dc7;
 }
 
 .btn01 {
@@ -578,17 +579,17 @@ img.is-sp {
 }
 
 .mv__logo {
-	font-size: 7.5vw;
+	font-size: 6.5vw;
 	line-height: 1.2;
 	font-weight: bold;
-	padding: 0 0 5vw 3vw;
+	padding: 0 0 5vw 6vw;
 	width: 50%;
 	font-family: "Lato";
 }
 
 .mv__img {
 	width: 50%;
-	padding: 0 5vw 0 0;
+	padding: 0 8vw 0 0;
 }
 
 .aboutBox {
@@ -977,6 +978,59 @@ article.single-post {
 	display: inline-block;
 }
 
+/* Share button */
+
+.snsShareArea {
+	margin-bottom: 3rem;
+}
+
+.snsShareArea:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.snsShareArea a {
+	box-sizing: border-box;
+	display: block;
+	float: left;
+	width: 31.3%;
+	margin: 1%;
+	padding: 0.7em 0;
+	border-radius: 3px;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.btn--twitter {
+	background: #55acee;
+}
+
+.btn--facebook {
+	background: #3b5998;
+}
+
+.btn--line {
+	background: #54bc4d;
+}
+
+.btn--hatena {
+	background: #008FDE;
+}
+
+.btn--pocket {
+	background: #ee4056;
+}
+
+.btn--pinterest {
+	background: #c60120;
+}
+
 @media screen and (min-width: 768px) {
 
 .worksItems__item:hover {
@@ -1037,11 +1091,11 @@ body {
 	font-size: 1.7rem;
 }
 
-.post-categories li {
+.catsList.catsList--works {
 	font-size: 1.7rem;
 }
 
-.catsList {
+.post-categories li {
 	font-size: 1.7rem;
 }
 

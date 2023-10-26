@@ -10,7 +10,6 @@
 
 
 <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-<?php //if(have_posts()): the_post(); ?>
   <main class="post">
   <article class="single-post">
   <div class="single-post__inner">
@@ -24,12 +23,11 @@
   <div class="postBody">
   <?php the_content(); ?>
   </div>
-  <?php get_template_part( 'template-parts/tpl', 'snslist' ); ?>
+  <?php get_template_part( 'template-parts/tpl', 'snsicon' ); ?>
   <?php get_template_part( 'template-parts/tpl', 'pagenation' ); ?>
   </div>
   </article>
   </main>
-<?php //endif; ?>
 <?php
 endwhile;
 endif;
