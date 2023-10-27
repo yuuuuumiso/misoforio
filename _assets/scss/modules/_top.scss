@@ -232,7 +232,7 @@
     font-size: 2.4rem;
     }
     &__wrap{
-    padding: 5rem 0 3rem 3rem;
+    padding: 5rem 0 3rem 2rem;
     @include m.mq(sp) {
         padding: 3rem 0 3rem 2rem;
       }
