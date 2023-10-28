@@ -4,7 +4,7 @@
 
 
 
-// パンくずリスト
+// パンくずリストはfunction.phpで出すパターンとtlpをよういするパターンがある
 function breadcrumb() {
   $home = '<li><a href="'.get_bloginfo('url').'" >HOME</a></li>';
 

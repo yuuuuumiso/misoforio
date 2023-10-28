@@ -100,6 +100,7 @@ function add_files(){
 // 上記ではiPhoneで反映されなかった
 wp_enqueue_style('googlefonts', "https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap", array(), null );
 wp_enqueue_style("swiper-css","https://unpkg.com/swiper@8/swiper-bundle.min.css");
+wp_enqueue_style( 'fontawesome-style', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css' );
 //wp_enqueue_style( 'swiper-css' );
 //wp_enqueue_style('my_style',DIRE.'/css/style.css');
 //wp_enqueue_style('style', DIRE.'/css/style.css', array(), date('YmdGis', filemtime(get_template_directory().'/css/style.css')));//パラメータ付与

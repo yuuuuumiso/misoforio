@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: space-between;
     padding:3vw 0 0 0;
+	animation: site-title 0.8s ease 0.5s 1 normal;
+	animation-fill-mode: forwards;
+	opacity: 0;
     @include m.mq(sp) {
         flex-direction: column-reverse;
         justify-content: center;

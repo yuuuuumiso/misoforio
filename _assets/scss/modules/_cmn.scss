@@ -225,7 +225,7 @@ input,textarea {
     padding: 0.5rem 1rem;
     color: #fff;
     background: #0e7dc7;
-    //margin: 0 0.5rem 1rem 0;
+    margin: 0 0.5rem 0rem 0;
     @include m.mq(sp) {
       font-size: 1.7rem;
     }

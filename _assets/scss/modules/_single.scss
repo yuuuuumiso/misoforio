@@ -4,9 +4,9 @@
 background-color:#ffffff;
  }
 .post{
-padding: 10rem 0 10rem;
+padding: 10rem 0 0rem;
 @include m.mq(sp) {
-  padding:75px 2.5rem 15rem;
+  padding:75px 2.5rem 0rem;
  }
 }
 article.single-post{
@@ -15,25 +15,26 @@ article.single-post{
   background: #ffffff;
   display: flex;
   justify-content: space-between;
-  border-radius: 10px;
+//  border-radius: 10px;
   @include m.mq(sp) {
     flex-direction: column;
   }
 }
   .single-post__inner{
     width: 108rem;
-    box-shadow: 0px 0px 15px -5px #777777;
-    border-radius: 10px;
+//    box-shadow: 0px 0px 15px -5px #777777;
+//    border-radius: 10px;
     padding:5rem 5rem 15rem;
     @include m.mq(sp) {
       width: 100%;
       margin-bottom: 3rem;
+      padding:3rem 2.5rem 5rem;
     }
   }
 .post{
     h1.postTtl01{
-        margin-bottom: 3rem;
-        font-size: 4.4rem;
+        margin-bottom: 3.2rem;
+        font-size: 4rem;
         color: #333;
         font-weight: 600;
         @include m.mq(sp) {
@@ -42,7 +43,7 @@ article.single-post{
     }
     h2{
       margin-bottom: 3rem;
-      font-size: 3.8rem;
+      font-size: 3.4rem;
       font-weight: 600;
       padding: 0.25em 0.5em;/*上下 左右の余白*/
       color: #494949;/*文字 色*/
@@ -80,9 +81,19 @@ color: #6C9FCE; /*アイコン色*/
     font-size: 2.8rem;
   }
 }
+.single-post__info{
+display: flex;
+justify-content: space-between
+}
 .postData{
   font-size: 2rem;
   margin-bottom: 1rem;
+  i{
+    padding: 0 0.5em 0 0;
+  }
+  span{
+    padding: 0 1em 0 0;
+  }
 }
 .postThumb{
   margin-bottom: 5rem;
@@ -117,14 +128,52 @@ color: #6C9FCE; /*アイコン色*/
 }
 
 .postLinks{
+  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    @include m.mq(sp) {
+      display: block;
+    }
    &__item{
     font-size: 2.2rem;
-    margin-bottom: 1rem;
-    a{
+    margin-bottom: 0rem;
+    position: relative;
+    width: 48%;
+    @include m.mq(sp) {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    &:before {
+      content: "";
+      display: block;
+      height: 0.5em;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      width: 0.5em;
+      z-index: 1;
+  }
+  &.prev{
+    padding: 0 0 0 3rem;
+    &:before {
+      border-bottom: 1px solid;
+      border-left: 1px solid;
+      transform: rotate(45deg) translateY(-50%);
+      left: 0;
+    }
+  }
+  a{
       display: inline-block;
     }
     &.next{
-      text-align: right;
+      padding: 0 3rem 0 0rem;
+      &:before {
+        border-bottom: 1px solid;
+        border-right: 1px solid;
+        transform: rotate(-45deg) translateY(-50%);
+        right: 0;
+        left: auto;
+      }
     }
   }
 }

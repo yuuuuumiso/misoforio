@@ -1,0 +1,18 @@
+@charset "utf-8";
+.breadcrumb {
+	font-size: 1.8rem;
+	animation: site-title 0.8s ease 0.5s 1 normal;
+	animation-fill-mode: forwards;
+	opacity: 0;
+  margin-bottom: 3rem;
+}
+.breadcrumb ul li {
+display: inline-block;
+margin: 0 0 0rem;
+}
+.breadcrumb .fa-home {
+	padding-right: 1rem;	
+}
+.breadcrumb .fa-chevron-right {
+	padding: 0 1rem;
+}
