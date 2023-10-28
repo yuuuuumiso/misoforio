@@ -1,4 +1,7 @@
+
 <div class="snsShareArea">
+
+<h3 class="snsShareArea__ttl">SNSでシェアする</h3>
 
 <!-- Twitter -->
 <a class="btn--twitter" href="http://twitter.com/share?url=<?php the_permalink();?>&text=<?php echo get_the_title(); ?>&via=shiromisooo&tw_p=tweetbutton&related=shiromisooo" target="_blank">

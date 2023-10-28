@@ -4,10 +4,10 @@
 background-color:#ffffff;
  }
 .post{
-padding: 15rem 0 10rem;
+padding: 10rem 0 10rem;
 @include m.mq(sp) {
-  padding:15rem 2.5rem 15rem;
-}
+  padding:75px 2.5rem 15rem;
+ }
 }
 article.single-post{
   margin:0 auto 0;

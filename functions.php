@@ -48,6 +48,23 @@ function my_document_title_separator($separator){
 
 
 
+// ウィジェット機能を有効化
+function theme_widgets_init() {
+    register_sidebar( array(
+        'name' => ' サイドバーウィジェット',
+        'id' => 'side-widget',
+        'description' => ' サイドバーで使うウィジェット',
+        'before_widget' => '<li class="sidebar__blk">',
+        'after_widget' => '</li>',
+    ) );
+}
+add_action('widgets_init','theme_widgets_init' );
+
+
+
+
+
+
 
 
 

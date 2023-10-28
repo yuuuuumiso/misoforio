@@ -4,7 +4,11 @@
 /* Share button */
 
 .snsShareArea{
-  margin-bottom: 3rem;
+  margin: 10rem auto 5rem;
+}
+.post h3.snsShareArea__ttl{
+  text-align: center;
+  border-bottom: dotted 3px #7db4e6;
 }
 .snsShareArea:after {
     content: ".";
