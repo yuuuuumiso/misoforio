@@ -301,3 +301,29 @@ input,textarea {
     font-size: 1.6rem;
   }
 }
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  max-width: 152rem;
+  margin: auto;
+  @include m.mq(sp) {
+    display: block;
+  }
+  &__main{
+    width: 108rem;
+        padding:0rem 3rem 5rem;
+        @include m.mq(sp) {
+          width: 100%;
+          padding:0rem 0rem 3rem;
+        }
+  }
+  &__side{
+    width: 42rem;
+    padding:0 1rem 5rem;
+    @include m.mq(sp) {
+      width: 100%;
+      padding:0 0rem 3rem;
+    }
+  }
+}

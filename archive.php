@@ -6,22 +6,21 @@
 ?>
 <?php get_header();?>
 
-<style>
-    .archive{
-        font-size: 2rem;
-    }
-</style>
 
-<main class="archive">
+<main class="content content--typeB">
+
+<article class="content__main single-post">
+<ul class="blogLists">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="blog-list__list-item">
-        <a href="<?php the_permalink(); ?>" class="blog-item">
-                <h3 class="blog-item__title"><?php the_title(); ?></h3>
-        </a>
-    </div>
+<?php get_template_part( 'template-parts/loop', 'topblog' ); ?>
 <?php endwhile; endif; ?>
+</ul>
+</article>
+
+<?php get_sidebar(); ?>
+
 </main>
 
-<p>index.php</p>
+
 
 <?php get_footer();?>
