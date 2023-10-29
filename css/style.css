@@ -1140,6 +1140,27 @@ img.is-sp {
 	padding-bottom: 1rem;
 }
 
+.blogLists--card .blogList {
+	width: 48.5%;
+}
+
+.blogLists--card .blogList__link {
+	display: block;
+}
+
+.blogLists--card .blogList__img {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.blogLists--card .blogList__img img {
+	height: clamp(100px, 13vw, 200px);
+}
+
+.blogLists--card .blogList__body {
+	width: 100%;
+}
+
 @media screen and (min-width: 768px) {
 
 .worksItems__item:hover {
@@ -1367,6 +1388,14 @@ body {
 .postLinks__item {
 	width: 100%;
 	margin-bottom: 1em;
+}
+
+.blogLists--card .blogList {
+	width: 100%;
+}
+
+.blogLists--card .blogList__img img {
+	height: clamp(100px, 40vw, 300px);
 }
 
 }

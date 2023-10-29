@@ -1,20 +1,30 @@
-<?php
-/*
- * Template Name: archive.php
- *メインループなので投稿数が管理画面で設定した数になる：今は④件
- */
-?>
-<?php get_header();?>
+<?php get_header(); ?>
 
 
-<main class="content content--typeB">
 
+
+
+
+
+
+
+
+
+<main class="content post">
 <article class="content__main single-post">
-<ul class="blogLists">
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<?php get_template_part( 'template-parts/loop', 'topblog' ); ?>
-<?php endwhile; endif; ?>
+<div class="contentMain__inner">
+<div class="contentMain__head">
+<?php get_template_part( 'template-parts/tpl', 'breadcrumb' ); ?>
+</div>
+<ul class="blogLists blogLists--card">
+<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+<?php get_template_part( 'template-parts/loop', 'archiveList' ); ?>
+<?php
+endwhile;
+endif;
+?>
 </ul>
+</div>
 </article>
 
 <?php get_sidebar(); ?>
@@ -23,4 +33,7 @@
 
 
 
-<?php get_footer();?>
+
+
+
+  <?php get_footer(); ?>
