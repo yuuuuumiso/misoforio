@@ -19,13 +19,12 @@
       <ul class="blogLists blogLists--card">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <?php get_template_part('template-parts/loop', 'archiveList'); ?>
-          <?php endwhile;
-          　 ?>
-          <?php the_posts_pagination(); ?>
-        <?php else : ?>
+          <?php endwhile; ?>
+          <?php else : ?>
           <p>まだ記事がありません</p>
         <?php endif; ?>
       </ul>
+      <div class="pageNation"><?php the_posts_pagination(); ?></div>
     </div>
   </article>
   <?php get_sidebar(); ?>

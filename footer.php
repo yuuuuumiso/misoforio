@@ -16,26 +16,10 @@
       <h2 class="sec__ttl sec__ttl--contact">C<span class="sec__ttl--small">ontact</span></h2>
       <p class="sec__ttl-sub">ご連絡</p>
     </div>
-
     <?php echo do_shortcode('[contact-form-7 id="b25a1d8" title="コンタクトフォーム 1"]'); ?>
-
-    <!-- <form id="contact">
-      <div class="container">
-        <input type="text" name="name" placeholder="Name" /><input  type="email" name="email" placeholder="Email" /><textarea type="text" name="message" placeholder="Message"></textarea><br />
-        <div class="message">Message Sent</div>
-        <button id="submit" type="submit">
-          Send!
-        </button>
-      </div>
-    </form> -->
-
   </div>
 </section>
 
-
-
-  <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="./js/script.js"></script> -->
 </div><!-- .wrap -->
 <!-- <div id="cursor" class="cursor"></div> -->
 <?php wp_footer(); ?>
