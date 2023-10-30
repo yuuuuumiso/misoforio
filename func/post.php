@@ -4,7 +4,7 @@
 
 
 
-// パンくずリストはfunction.phpで出すパターンとtlpをよういするパターンがある
+// パンくずリストはfunction.phpで出すパターンとtlpを用意するパターンがある
 function breadcrumb() {
   $home = '<li><a href="'.get_bloginfo('url').'" >HOME</a></li>';
 
@@ -66,6 +66,11 @@ function breadcrumb() {
   echo $home;
   echo '<li>ページが見つかりません</li>';
   }
+  //それ以外：投稿のアーカイブなど
+  else{
+    echo $home;
+    the_title('<li>', '</li>');//もしくはthe_archive_title
+    }
   echo "</ul>";
 }
 // アーカイブのタイトルを削除
@@ -104,12 +109,13 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 
 
-
+/* 投稿アーカイブを有効にしてスラッグを指定する */
 //通常投稿blogのURLを/ドメイン/記事名⇒/ドメイン/blog/記事名。パーマリンクを更新しないと反映されない：https://fundemic.jp/blog/the-tohr-archive/
 function post_has_archive( $args, $post_type ) {
     if ( 'post' == $post_type ) {
      $args['rewrite'] = true;
      $args['has_archive'] = 'blog'; //任意のスラッグ名　←アーカイブページを有効に
+     $args['label'] = 'ブログ'; //「投稿」から変更
      }
      return $args;
     }

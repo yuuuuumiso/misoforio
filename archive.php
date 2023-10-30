@@ -11,24 +11,24 @@
 
 
 <main class="content post">
-<article class="content__main single-post">
-<div class="contentMain__inner">
-<div class="contentMain__head">
-<?php get_template_part( 'template-parts/tpl', 'breadcrumb' ); ?>
-</div>
-<ul class="blogLists blogLists--card">
-<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
-<?php get_template_part( 'template-parts/loop', 'archiveList' ); ?>
-<?php
-endwhile;
-endif;
-?>
-</ul>
-</div>
-</article>
-
-<?php get_sidebar(); ?>
-
+  <article class="content__main single-post">
+    <div class="contentMain__inner">
+      <div class="contentMain__head">
+        <?php get_template_part('template-parts/tpl', 'breadcrumb'); ?>
+      </div>
+      <ul class="blogLists blogLists--card">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php get_template_part('template-parts/loop', 'archiveList'); ?>
+          <?php endwhile;
+          　 ?>
+          <?php the_posts_pagination(); ?>
+        <?php else : ?>
+          <p>まだ記事がありません</p>
+        <?php endif; ?>
+      </ul>
+    </div>
+  </article>
+  <?php get_sidebar(); ?>
 </main>
 
 
@@ -36,4 +36,4 @@ endif;
 
 
 
-  <?php get_footer(); ?>
+<?php get_footer(); ?>
