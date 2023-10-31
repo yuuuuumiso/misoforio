@@ -27,7 +27,13 @@ add_theme_support( 'html5', array(
     'comment-list',
     'gallery',
     'caption',
-) );
+));
+
+// カスタムメニュー有効化（複数メニュー）.
+register_nav_menus( array(
+'header-menu' => 'ヘッダーメニュー',
+'footer-menu' => 'フッターメニュー',
+));
 
 }
 add_action( 'after_setup_theme', 'themeSetup' );

@@ -25,13 +25,24 @@
   <nav id="g-nav" class="">
     <div id="g-nav-list">
     <ul>
-    <li><a href="<?php echo esc_url( home_url() ); ?>">Top</a></li>	
-    <li><a href="#about">About</a></li>
+    <li><a href="<?php echo esc_url( home_url() ); ?>">Home</a></li>
     <li><a href="<?php echo esc_url( home_url() ); ?>/works/">Works</a></li>
-    <li><a href="#skills">Skills</a></li>	
     <li><a href="<?php echo esc_url( home_url() ); ?>/blog/">Blog</a></li>
-    <li><a href="#contact">Contact</a></li>	
     </ul>
+<?php
+wp_nav_menu(
+array(
+'theme_location' => 'header-menu',
+'container' => 'div',
+'container_id' => 'g-nav-list',
+// 'menu_class' => 'header-list',
+// 'before' => '<span class="menu-link">',
+// 'after' => '</span>',
+// 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+//％1 $ sに ‘menu_id’のパラメーターの値が展開。％2 $ sに ‘menu_class’のパラメーターの値が展開。％3 $ sはリストアイテムが値として展開されます。
+)
+);
+?>
     </div>
     </nav>
     <div class="g-nab-bg"></div>
