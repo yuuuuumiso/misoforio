@@ -1,8 +1,17 @@
 
 <?php
 
-
-
+//クエリの表示件数を変更
+function my_pre_get_posts_number( $query ) { 
+        if(is_admin() || ! $query -> is_main_query()) return; 
+        if($query->is_home()){
+          $query->set( 'posts_per_page',3); 
+        }
+        if ($query->is_archive() ) {
+            $query->set( 'posts_per_page', '5' );
+  }
+} 
+add_action('pre_get_posts','my_pre_get_posts_number'); 
 
 // パンくずリストはfunction.phpで出すパターンとtlpを用意するパターンがある.現在はtplから出力
 function breadcrumb()
