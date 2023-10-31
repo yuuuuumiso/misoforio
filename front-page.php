@@ -60,29 +60,18 @@
 $args = array(//サブクエリは専用のphpに書くか、関数化する
 'post_type' => 'works',//投稿タイプ
 'post_status' => 'publish',//公開済み
-'posts_per_page' => 6, /* 表示する数 */
+'posts_per_page' => 6, // 表示する数
 'orderby'        => 'date',//投稿日時
 'order'          => 'DESC',//降順
 'has_password' => false,
-//'category_name' => 'programming',//特定のカテゴリ
 ); ?>
 <?php $my_query = new WP_Query( $args ); ?>
 <?php if( $my_query->have_posts() ) : ?>
 <?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
-<div class="worksItems__item swiper-slide">
-<a href="<?php the_permalink(); ?>">
-<div class="worksItems__image"><?php the_post_thumbnail();?></div>
-<div class="worksItems__body">
-<div class="worksItems__date"><?php the_time( 'Y/n/j' ); ?></div>
-<h3 class="worksItems__ttl"><?php echo the_title(); ?></h3>
-</div>
-</a>
-</div>
-<?php endwhile;?>
-<?php endif;?>
+<?php get_template_part( 'template-parts/loop', 'top-works' ); ?>
+<?php endwhile; endif; ?>
 <?php wp_reset_postdata();?>
 </div>
-
     <!-- ページネーション（※省略可） -->
     <!-- <div class="swiper-pagination"></div> -->
     <!-- ナビゲーションボタン（※デフォルトのやつ。今回はカスタム）
