@@ -47,8 +47,6 @@
       <a href="" class="right-btn swiper-right-btn" tabindex="0" role="button" aria-label="Previous slide"></a>
     </div>
 
-    <p class="btn btn01"><a href="<?php echo get_post_type_archive_link('works'); ?>" class="btn">最新情報の一覧</a>
-
       <!-- ここ関数化できるな -->
     </p>
     <div class="worksItems swiper-container">
@@ -78,7 +76,7 @@
     -->
       <!-- スクロールバー（※省略可） -->
       <!-- <div class="swiper-scrollbar"></div>  -->
-
+      <p class="btn01 btn01--A"><a href="<?php echo get_post_type_archive_link('works'); ?>" class="btn">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png"></a>
     </div>
   </div>
 
@@ -141,7 +139,7 @@
         <?php endwhile;
         endif; ?>
       </ul>
-      <p class="btn01"><a href="<?php echo esc_url(home_url('blog')); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png" alt=""></a></p>
+      <p class="btn01"><a href="<?php echo esc_url(home_url('blog')); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png"></a></p>
     </div>
   </div>
 </section>

@@ -1,6 +1,6 @@
     <li class="blogList">
          <a class="blogList__link" href="<?php the_permalink(); ?>">
-          <p class="blogList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/blog_img01.png"></p>
+          <p class="blogList__img"><?php the_post_thumbnail('square'); ?></p>
           <div class="blogList__body">
             <p class="blogList__date"><?php the_time( 'Y/n/j' ); ?></p>
             <ul class="catsList catsList--top">

@@ -236,33 +236,6 @@
   }
 }
 
-.btn01 {
-  border: 1px solid #999;
-  border-radius: 25px;
-  display: block;
-  text-align: right;
-  width: 17rem;
-  margin: 0 0 0 auto;
-  @include m.mq(sp) {
-    width: 25rem;
-  }
-  a {
-    display: flex;
-    align-items: center;
-    font-size: 1.6rem;
-    border-radius: 6px;
-    padding: 1rem 1rem 1rem 1.5rem;
-    letter-spacing: 0.1em;
-    @include m.mq(sp) {
-      font-size: 2.6rem;
-      padding: 1rem 1rem 1rem 2.5rem;
-    }
-    img {
-      padding: 0 0 0.3rem 1.6rem;
-      vertical-align: middle;
-    }
-  }
-}
 
 /*デフォルトのマウスカーソルを非表示にする*/
 // html,body,a{cursor: none;}
@@ -292,14 +265,6 @@
   background: rgba(15, 125, 200, 0.7);
 }
 
-// パンくず
-.breadCrumb {
-  margin-bottom: 1.8rem;
-  li {
-    display: inline-block;
-    font-size: 1.6rem;
-  }
-}
 
 .content {
   display: flex;

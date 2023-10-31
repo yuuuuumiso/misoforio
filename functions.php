@@ -14,11 +14,12 @@ require_once get_theme_file_path( './func/custom-post.php' ); //カスタム投�
 
 //WP基本設定
 function themeSetup() {
- //サムネイル利用
-    add_theme_support('post-thumbnails');
- 
-    //タイトルタグ
-    add_theme_support('title-tag');
+//サムネイル利用
+add_theme_support('post-thumbnails');
+
+//タイトルタグ
+add_theme_support('title-tag');
+add_image_size('square', 250, 250, true );//リサイズ
 
 //2番目のパラメータに指定した箇所がHTML5に準拠した形で出力されるようになります。例えばtype='text/javascript'やtype='text/css'のような不要な属性は出力されなくなります。
 add_theme_support( 'html5', array(

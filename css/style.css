@@ -510,29 +510,6 @@ img.is-sp {
 	margin: 0 0.5rem 0rem 0;
 }
 
-.btn01 {
-	border: 1px solid #999;
-	border-radius: 25px;
-	display: block;
-	text-align: right;
-	width: 17rem;
-	margin: 0 0 0 auto;
-}
-
-.btn01 a {
-	display: flex;
-	align-items: center;
-	font-size: 1.6rem;
-	border-radius: 6px;
-	padding: 1rem 1rem 1rem 1.5rem;
-	letter-spacing: 0.1em;
-}
-
-.btn01 a img {
-	padding: 0 0 0.3rem 1.6rem;
-	vertical-align: middle;
-}
-
 /*デフォルトのマウスカーソルを非表示にする*/
 
 /*独自のマウスカーソルを作成*/
@@ -560,15 +537,6 @@ img.is-sp {
 	width: 60px;
 	height: 60px;
 	background: rgba(15, 125, 200, 0.7);
-}
-
-.breadCrumb {
-	margin-bottom: 1.8rem;
-}
-
-.breadCrumb li {
-	display: inline-block;
-	font-size: 1.6rem;
 }
 
 .content {
@@ -736,6 +704,8 @@ img.is-sp {
 .blogList__img img {
 	object-fit: cover;
 	width: 100%;
+	object-position: auto;
+	height: 20rem;
 }
 
 .blogList__body {
@@ -1117,6 +1087,15 @@ img.is-sp {
 	padding: 0 1rem;
 }
 
+.breadCrumb {
+	margin-bottom: 1.8rem;
+}
+
+.breadCrumb li {
+	display: inline-block;
+	font-size: 1.6rem;
+}
+
 .sidebar__blk {
 	font-size: 2rem;
 	margin: 0 auto 5rem;
@@ -1170,6 +1149,33 @@ img.is-sp {
 	display: block;
 	font-size: 2rem;
 	padding: 0 1rem;
+}
+
+.btn01 {
+	border: 1px solid #999;
+	border-radius: 25px;
+	display: block;
+	width: 17rem;
+	margin: 0 0 0 auto;
+}
+
+.btn01 a {
+	display: flex;
+	align-items: center;
+	font-size: 1.6rem;
+	border-radius: 6px;
+	padding: 1rem 1rem 1rem 2rem;
+	letter-spacing: 0.1em;
+	justify-content: center;
+}
+
+.btn01 a img {
+	padding: 0 0 0.3rem 1rem;
+	vertical-align: middle;
+}
+
+.btn01--A {
+	margin: 0 1.5vw 0 auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -1238,15 +1244,6 @@ body {
 
 .post-categories li {
 	font-size: 1.7rem;
-}
-
-.btn01 {
-	width: 25rem;
-}
-
-.btn01 a {
-	font-size: 2.6rem;
-	padding: 1rem 1rem 1rem 2.5rem;
 }
 
 .content {
@@ -1407,6 +1404,15 @@ body {
 
 .blogLists--card .blogList__img img {
 	height: clamp(100px, 40vw, 300px);
+}
+
+.btn01 {
+	width: 25rem;
+}
+
+.btn01 a {
+	font-size: 2.6rem;
+	padding: 1rem 1rem 1rem 2.5rem;
 }
 
 }
