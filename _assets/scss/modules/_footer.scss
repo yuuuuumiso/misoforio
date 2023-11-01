@@ -1,4 +1,36 @@
 @charset "utf-8";
+
+
+
+
+
+
+
+
+
+
+
+
+// waves
+.mv__waves {
+  position: relative;
+  bottom: -35rem;
+  left: 0;
+  width: 100%;
+  margin-top: -30rem;
+  transform: rotate(180deg);
+  @include m.mq(sp) {
+      bottom: -13.9rem;
+      margin-top: -10rem;
+  }
+}
+.parallax>use {
+animation: move-forever 6s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+
+
+
 .intro {
   font-size: 1.4rem;
   border-top: 2px solid #ddd;
