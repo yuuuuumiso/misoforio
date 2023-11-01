@@ -12,6 +12,15 @@
     max-width: 152rem;
     margin: auto;
     padding: 0 4rem;
+    &--contact{
+      .wpcf7.js{
+      max-width: 100rem;
+      margin: auto;
+      @include m.mq(sp) {
+        max-width: 60rem;        
+      }
+    }
+    }
   }
   &__ttlBox {
     margin: 0 0 6rem;

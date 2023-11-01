@@ -32,7 +32,6 @@
         padding: 0 8vw 0 0;
         @include m.mq(sp) {
             padding: 0 0 5vw 0;
-            //width: min(400px, 60%);  
             width: clamp(200px, 60%, 400px);
         }
     }

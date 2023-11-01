@@ -11,7 +11,7 @@
 </div>
 
 <section class="sec contact">
-  <div class="sec__inner">
+  <div class="sec__inner sec__inner--contact">
     <div class="sec__ttlBox">
       <h2 class="sec__ttl sec__ttl--contact">C<span class="sec__ttl--small">ontact</span></h2>
       <p class="sec__ttl-sub">ご連絡</p>

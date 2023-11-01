@@ -48,7 +48,6 @@
     </div>
 
       <!-- ここ関数化できるな -->
-    </p>
     <div class="worksItems swiper-container">
       <div class="worksItems__wrap swiper-wrapper">
         <?php

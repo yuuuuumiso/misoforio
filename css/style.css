@@ -358,6 +358,11 @@ img.is-sp {
 	padding: 0 4rem;
 }
 
+.sec__inner--contact .wpcf7.js {
+	max-width: 100rem;
+	margin: auto;
+}
+
 .sec__ttlBox {
 	margin: 0 0 6rem;
 }
@@ -1200,6 +1205,10 @@ body {
 	background: #dddddd;
 }
 
+.sec__inner--contact .wpcf7.js {
+	max-width: 60rem;
+}
+
 .sec__ttl {
 	font-size: 12rem;
 	padding: 0 0 0 7vw;
@@ -1403,7 +1412,7 @@ body {
 }
 
 .blogLists--card .blogList__img img {
-	height: clamp(100px, 40vw, 300px);
+	height: clamp(100px, 45vw, 300px);
 }
 
 .btn01 {
@@ -1413,6 +1422,10 @@ body {
 .btn01 a {
 	font-size: 2.6rem;
 	padding: 1rem 1rem 1rem 2.5rem;
+}
+
+.btn01--A {
+	margin: 5rem 3.5vw 0 auto;
 }
 
 }

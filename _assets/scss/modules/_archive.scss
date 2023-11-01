@@ -17,7 +17,7 @@
 				img{
 				height: clamp(100px, 13vw, 200px);
 				@include mq(sp) {
-					height: clamp(100px, 40vw, 300px);
+					height: clamp(100px, 45vw, 300px);
 				}
 			}
 			}

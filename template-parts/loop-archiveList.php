@@ -1,25 +1,18 @@
-
-
-
-
-<!-- カスタム投稿用のarchive-works.phpつくる。<?php $cat = get_the_category(); ?><?php $cat = $cat[0]; ?><?php echo get_cat_name($cat->term_id); ?>が使えない -->
-
 <li class="blogList">
-      <a class="blogList__link" href="<?php the_permalink(); ?>">
-        <p class="blogList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/blog_img01.png"></p>
-        <div class="blogList__body">
-          <p class="blogList__date"><?php the_time('Y/n/j'); ?></p>
-          <ul class="catsList catsList--top">
-<li class="catsList__item">
-<?php // if($terms = get_the_terms($post->ID,'works-genre')){
-//   foreach($terms as $term){
-// 		echo esc_html($term->name) ;
-// 	}
-// }下記の複数版?>
-<?php echo get_the_terms(get_the_ID(), 'works-genre')[0]->name;?>
+  <a class="blogList__link" href="<?php the_permalink(); ?>">
+    <p class="blogList__img"><img src="<?php echo get_template_directory_uri(); ?>/img/blog_img01.png"></p>
+    <div class="blogList__body">
+      <p class="blogList__date"><?php the_time('Y/n/j'); ?></p>
+      <ul class="catsList catsList--top">
+        <li class="catsList__item">
+          <?php if (is_post_type_archive('works')) : ?>
+            <?php echo get_the_terms(get_the_ID(), 'works-genre')[0]->name; ?>
+          <?php else : ?>
+            <?php $cat = get_the_category(); ?><?php $cat = $cat[0]; ?><?php echo get_cat_name($cat->term_id); ?>
+          <?php endif; ?>
+        </li>
+      </ul>
+      <p class="blogList__ttl"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></p>
+    </div>
+  </a>
 </li>
-          </ul>
-          <p class="blogList__ttl"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></p>
-        </div>
-      </a>
-    </li>

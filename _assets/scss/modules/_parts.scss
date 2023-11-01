@@ -29,5 +29,8 @@
   }
   &--A{
     margin: 0 1.5vw 0 auto;
+    @include mq(sp) {
+      margin: 5rem 3.5vw 0 auto;
+    }
   }
 }
