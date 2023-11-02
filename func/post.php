@@ -1,7 +1,7 @@
 
 <?php
 
-//投稿の表示件数を変更
+//投稿の表示件数を変更9時13分
 function my_pre_get_posts_number( $query ) { 
         if(is_admin() || ! $query -> is_main_query()) return; 
         // if($query->is_home()){
