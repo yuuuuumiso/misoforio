@@ -14,7 +14,7 @@ function my_pre_get_posts_number( $query ) {
 add_action('pre_get_posts','my_pre_get_posts_number'); 
 
 
-// パンくずリストはfunction.phpで出すパターンとtlpを用意するパターンがある.現在はtplから出力
+// パンくずリストはfunction.phpで出すパターンとtlpを用意するパターンがある.現在はtplから出力 9時14分
 function breadcrumb()
 {
     $home = '<li><a href="' . get_bloginfo('url') . '" >HOME</a></li>';
