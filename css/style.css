@@ -839,19 +839,6 @@ img.is-sp {
 	left: 58%;
 }
 
-.mv__waves {
-	position: relative;
-	bottom: -35rem;
-	left: 0;
-	width: 100%;
-	margin-top: -30rem;
-	transform: rotate(180deg);
-}
-
-.parallax > use {
-	animation: move-forever 6s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-}
-
 .wrap--single {
 	background-color: #ffffff;
 }
@@ -860,14 +847,14 @@ img.is-sp {
 	padding: 10rem 0 0rem;
 }
 
-.post h1.postTtl01 {
+.content__main h1.postTtl01 {
 	margin-bottom: 3.2rem;
 	font-size: 4rem;
 	color: #333;
 	font-weight: 600;
 }
 
-.post h2 {
+.content__main h2 {
 	margin-bottom: 3rem;
 	font-size: 3.4rem;
 	font-weight: 600;
@@ -877,7 +864,7 @@ img.is-sp {
 	border-left: solid 5px #7db4e6; /*左線*/
 }
 
-.post h3 {
+.content__main h3 {
 	border-bottom: solid 3px #7db4e6;
 	margin-bottom: 2.8rem;
 	font-size: 3rem;
@@ -885,7 +872,7 @@ img.is-sp {
 	padding: 0.25em 0; /*上下 左右の余白*/
 }
 
-.post h4 {
+.content__main h4 {
 	margin-bottom: 2.6rem;
 	font-size: 2.6rem;
 	font-weight: 600;
@@ -893,7 +880,7 @@ img.is-sp {
 	padding-left: 1.2em; /*アイコン分のスペース*/
 }
 
-.post h4:before {
+.content__main h4:before {
 	content: "✓"; /*アイコンのユニコード*/
 	position: absolute; /*絶対位置*/
 	font-size: 1em; /*サイズ*/
@@ -902,29 +889,29 @@ img.is-sp {
 	color: #6C9FCE; /*アイコン色*/
 }
 
-.post .single-post__info {
+.content__main .single-post__info {
 	display: flex;
 	justify-content: space-between;
 }
 
-.post .postData {
+.content__main .postData {
 	font-size: 2rem;
 	margin-bottom: 1rem;
 }
 
-.post .postData i {
+.content__main .postData i {
 	padding: 0 0.5em 0 0;
 }
 
-.post .postData span {
+.content__main .postData span {
 	padding: 0 1em 0 0;
 }
 
-.post .postThumb {
+.content__main .postThumb {
 	margin-bottom: 5rem;
 }
 
-.post .postThumb img {
+.content__main .postThumb img {
 	width: 100%;
 	object-fit: cover;
 	height: 80vh;
@@ -1011,6 +998,21 @@ img.is-sp {
 	margin: 0 1rem 2rem;
 	font-size: 2.8rem;
 	display: inline-block;
+}
+
+.content.content--works {
+	max-width: 1200px;
+	margin: auto;
+	display: block;
+	padding: 10rem 0 0rem;
+}
+
+.content__main.content__main--works {
+	width: 100%;
+}
+
+.postWorks {
+	display: flex;
 }
 
 /* Share button */
@@ -1369,32 +1371,27 @@ body {
 	transform: scale(1.2); /* スライドの大きさ調整 */
 }
 
-.mv__waves {
-	bottom: -14rem;
-	margin-top: -10rem;
-}
-
 .post {
 	padding: 75px 2.5rem 0rem;
 }
 
-.post h1.postTtl01 {
+.content__main h1.postTtl01 {
 	font-size: 3.6rem;
 }
 
-.post h2 {
+.content__main h2 {
 	font-size: 3.2rem;
 }
 
-.post h3 {
+.content__main h3 {
 	font-size: 3rem;
 }
 
-.post h4 {
+.content__main h4 {
 	font-size: 2.8rem;
 }
 
-.post .postThumb img {
+.content__main .postThumb img {
 	height: 30vh;
 }
 

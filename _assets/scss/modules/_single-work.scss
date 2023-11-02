@@ -1,0 +1,15 @@
+@charset "utf-8";
+@use 'mixin' as *;
+
+.content.content--works{
+max-width: 1200px;
+margin: auto;
+display: block;
+padding: 10rem 0 0rem;
+}
+.content__main.content__main--works{
+width: 100%;
+}
+.postWorks{
+  display: flex;
+}
