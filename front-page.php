@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
 <div class="mv">
-  <div class="mv__logo">Miso's<br>PORTFOLIO</div>
-  <div class="mv__img"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_img03.png"></div>
+  <div class="mv__logo"><span class="randomAnime">Miso's</span><span class="randomAnime">PORTFOLIO</span></div>
+  <div class="mv__img fadeUp"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_img03.png"></div>
 </div>
-
 <section class="sec about">
   <div class="sec__inner">
     <div class="sec__ttlBox">

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.14em;
+      }
+
+      .cls-3 {
+        fill: #444;
+        font-family: TsukuARdGothicStd-B-83pv-RKSJ-H, 'FOT-TsukuARdGothic Std';
+        font-size: 54.41px;
+      }
+    </style>
+  </defs>
+  <text class="cls-3" transform="translate(18.89 166.27)"><tspan x="0" y="0">味噌</tspan><tspan class="cls-2" x="108.83" y="0">ブ</tspan><tspan class="cls-1" x="155.62" y="0">ロ</tspan><tspan x="205.69" y="0">グ</tspan></text>
+</svg>

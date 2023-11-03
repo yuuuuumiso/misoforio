@@ -19,7 +19,6 @@
     <?php echo do_shortcode('[contact-form-7 id="b25a1d8" title="コンタクトフォーム 1"]'); ?>
   </div>
 </section>
-
 </div><!-- .wrap -->
 <!-- <div id="cursor" class="cursor"></div> -->
 <?php wp_footer(); ?>

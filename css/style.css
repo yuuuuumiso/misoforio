@@ -140,6 +140,13 @@ img.is-sp {
 
 /*anim start*/
 
+.fadeUp {
+	animation-name: fadeUpAnime;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
 /* 4-7 にゅーん（滑らかに変形して出現） */
 
 .smooth {
@@ -148,6 +155,10 @@ img.is-sp {
 	animation-fill-mode: forwards;
 	transform-origin: left;
 	opacity: 0;
+}
+
+.randomAnime {
+	visibility: hidden;
 }
 
 /*anim end*/
@@ -550,9 +561,6 @@ img.is-sp {
 	align-items: center;
 	justify-content: space-between;
 	padding: 3vw 0 0 0;
-	animation: site-title 0.8s ease 0.5s 1 normal;
-	animation-fill-mode: forwards;
-	opacity: 0;
 }
 
 .mv__logo {
@@ -567,6 +575,8 @@ img.is-sp {
 .mv__img {
 	width: 50%;
 	padding: 0 8vw 0 0;
+	animation: site-title 1s ease 0.4s 1 normal forwards;
+	opacity: 0;
 }
 
 .aboutBox {
@@ -1494,20 +1504,6 @@ to {
 
 }
 
-@keyframes smoothAnime {
-
-from {
-	transform: translate3d(0, 100%, 0) skewY(12deg);
-	opacity: 0;
-}
-
-to {
-	transform: translate3d(0, 0, 0) skewY(0);
-	opacity: 1;
-}
-
-}
-
 @keyframes move-forever {
 
 0% {
@@ -1527,6 +1523,34 @@ to {
 }
 
 100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes fadeUpAnime {
+
+from {
+	opacity: 0;
+	transform: translateY(50px);
+}
+
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
+
+@keyframes smoothAnime {
+
+from {
+	transform: translate3d(0, 100%, 0) skewY(12deg);
+	opacity: 0;
+}
+
+to {
+	transform: translate3d(0, 0, 0) skewY(0);
 	opacity: 1;
 }
 

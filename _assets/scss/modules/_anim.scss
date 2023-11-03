@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /*anim start*/
 @keyframes show {
   from {
@@ -9,24 +10,7 @@
   }
 }
 
-/* 4-7 にゅーん（滑らかに変形して出現） */
-.smooth {
-  animation-name: smoothAnime;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  transform-origin: left;
-  opacity: 0;
-}
-@keyframes smoothAnime {
-  from {
-    transform: translate3d(0, 100%, 0) skewY(12deg);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0, 0, 0) skewY(0);
-    opacity: 1;
-  }
-}
+
 
 @keyframes move-forever {
   0% {
@@ -47,4 +31,50 @@
     opacity: 1;
   }
 }
-/*anim end*/
+
+
+// このパターンでも設定できるし、こっちのほうが楽
+.fadeUp{
+  animation-name: fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(50px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+  /* 4-7 にゅーん（滑らかに変形して出現） */
+.smooth {
+  animation-name: smoothAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transform-origin: left;
+  opacity: 0;
+}
+@keyframes smoothAnime {
+  from {
+    transform: translate3d(0, 100%, 0) skewY(12deg);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0) skewY(0);
+    opacity: 1;
+  }
+}
+
+// top logo
+.randomAnime {
+	visibility: hidden;
+}
+
+  /*anim end*/

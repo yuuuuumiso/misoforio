@@ -107,7 +107,8 @@ function add_files(){
 // 上記ではiPhoneで反映されなかった
 wp_enqueue_style('googlefonts', "https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap", array(), null );
 wp_enqueue_style("swiper-css","https://unpkg.com/swiper@8/swiper-bundle.min.css");
-wp_enqueue_style( 'fontawesome-style', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css' );
+wp_enqueue_style('fontawesome-style', 'https://use.fontawesome.com/releases/v5.6.3/css/all.css' );
+wp_enqueue_style('animate-style', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css');
 //wp_enqueue_style( 'swiper-css' );
 //wp_enqueue_style('my_style',DIRE.'/css/style.css');
 //wp_enqueue_style('style', DIRE.'/css/style.css', array(), date('YmdGis', filemtime(get_template_directory().'/css/style.css')));//パラメータ付与
@@ -125,15 +126,9 @@ wp_css('style', '/css/style.css');
     wp_enqueue_script('my_script',DIRE.'/js/script.js');
     wp_enqueue_script('swiper-js','https://unpkg.com/swiper@8/swiper-bundle.min.js',array(),false,true);
 	//実際に動かすための設定ファイル
-	wp_enqueue_script(
-		"swiper-conf",
-		get_theme_file_uri("/js/swiper-conf.js"),
-		array("swiper-js"),
-		false,
-		true
-	);
-
-
+	wp_enqueue_script("swiper-conf",get_theme_file_uri("/js/swiper-conf.js"),array("swiper-js"),false,true);
+    wp_enqueue_script('textillate-js','https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js',array(),false,true);
+    wp_enqueue_script('lettering-js','http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-8/js/jquery.lettering.js',array(),false,true);
 }
 add_action('wp_enqueue_scripts', 'add_files');
 
