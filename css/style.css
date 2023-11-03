@@ -344,6 +344,53 @@ img.is-sp {
 
 /*head end*/
 
+.mv__waves {
+	position: relative;
+	bottom: -35rem;
+	left: 0;
+	width: 100%;
+	transform: rotate(180deg);
+}
+
+.mv__waves .parallax > use {
+	animation: move-forever 6s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.sec.contact {
+	background-image: linear-gradient(-45deg, rgb(70, 193, 230) 0%, rgb(14, 124, 199) 100%);
+	color: #fff;
+	margin: 0 auto 0;
+	padding: 40rem 0 10rem;
+}
+
+.sec.contact .container {
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 6px;
+}
+
+.sec.contact .head {
+	border-radius: 6px 6px 0px 0px;
+	color: #fafafa;
+}
+
+.sec.contact p,
+.sec.contact .wpcf7-response-output {
+	font-size: 2.6rem;
+	margin-bottom: 3rem;
+}
+
+.sec.contact input,
+.sec.contact textarea {
+	padding: 10px 10px 10px;
+	background: #ffffff;
+	border-radius: 5px;
+	background-clip: padding-box;
+	box-sizing: border-box;
+	width: 100%;
+	color: #333;
+}
+
 .wrap {
 	background: #fff url("../img/bg_mv.png") no-repeat left top/100% auto;
 }
@@ -442,41 +489,6 @@ img.is-sp {
 	z-index: 1;
 }
 
-.sec.contact {
-	background-image: linear-gradient(-45deg, rgb(70, 193, 230) 0%, rgb(14, 124, 199) 100%);
-	color: #fff;
-	margin: 0 auto 0;
-	padding: 40rem 0 10rem;
-}
-
-.sec.contact .container {
-	margin: 0 auto;
-	text-align: center;
-	border-radius: 6px;
-}
-
-.sec.contact .head {
-	border-radius: 6px 6px 0px 0px;
-	color: #fafafa;
-}
-
-.sec.contact p,
-.sec.contact .wpcf7-response-output {
-	font-size: 2.6rem;
-	margin-bottom: 3rem;
-}
-
-.sec.contact input,
-.sec.contact textarea {
-	padding: 10px 10px 10px;
-	background: #ffffff;
-	border-radius: 5px;
-	background-clip: padding-box;
-	box-sizing: border-box;
-	width: 100%;
-	color: #333;
-}
-
 .catsList__item {
 	display: inline-block;
 	vertical-align: top;
@@ -513,35 +525,6 @@ img.is-sp {
 	color: #fff;
 	background: #0e7dc7;
 	margin: 0 0.5rem 0rem 0;
-}
-
-/*デフォルトのマウスカーソルを非表示にする*/
-
-/*独自のマウスカーソルを作成*/
-
-.cursor {
-	position: fixed;
-	top: -5px;
-	left: -5px;
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	background: rgba(0, 0, 0, 0.7);
-	z-index: 4;
-	transition: width 0.2s, height 0.2s, top 0.2s, left 0.2s;
-	transition-timing-function: ease;
-	transform: translate(0, 0);
-	pointer-events: none;
-}
-
-/*aタグにホバーした時に見た目変化*/
-
-.cursor.cursor--hover {
-	top: -20px;
-	left: -20px;
-	width: 60px;
-	height: 60px;
-	background: rgba(15, 125, 200, 0.7);
 }
 
 .content {
@@ -1011,8 +994,43 @@ img.is-sp {
 	width: 100%;
 }
 
-.postWorks {
+.postBlock {
+	margin: 5rem 0 0;
 	display: flex;
+	justify-content: space-between;
+}
+
+.postBlock__img {
+	width: 48%;
+}
+
+.postBlock__img img {
+	width: 100%;
+}
+
+.postBlock__body {
+	width: 48%;
+}
+
+.worksList {
+	justify-content: space-between;
+	flex-wrap: wrap;
+	display: flex;
+	border-bottom: 1px dotted #ccc;
+}
+
+.worksList dt {
+	border-top: 1px dotted #ccc;
+	width: 14rem;
+	padding: 2rem 0 2rem 2rem;
+	font-size: 2rem;
+}
+
+.worksList dd {
+	padding: 2rem 2rem 2rem 1rem;
+	width: calc(100% - 14rem);
+	font-size: 2rem;
+	border-top: 1px dotted #ccc;
 }
 
 /* Share button */
@@ -1207,6 +1225,15 @@ body {
 	background: #dddddd;
 }
 
+.mv__waves {
+	bottom: -13.9rem;
+	margin-top: -10rem;
+}
+
+.sec.contact {
+	padding: 20rem 0 10rem;
+}
+
 .sec__inner--contact .wpcf7.js {
 	max-width: 60rem;
 }
@@ -1239,10 +1266,6 @@ body {
 	width: 100vw;
 	height: 100vw;
 	right: calc(100% + 15vw);
-}
-
-.sec.contact {
-	padding: 20rem 0 10rem;
 }
 
 .catsList__item {

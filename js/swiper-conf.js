@@ -83,3 +83,38 @@ var theSwiper = new Swiper('.worksItems', {
 
 
 
+
+
+var swiper1 = new Swiper('.postBlock__img', {
+loop: true,//繰り返し
+direction: 'horizontal',//横
+slidesPerView: 1,
+loopAdditionalSlides: 1, // 無限ループさせる場合に複製するスライド数
+speed: 300, // 1スライドアニメーションのスピード（ミリ秒）
+freeModeSticky: true,//スライドに合わせてスクロールがストップしてくれます。
+grabCursor: true, // PCでマウスカーソルを「掴む」マークにする
+watchSlidesProgress: true, // スライドの進行状況を監視する
+
+pagination: {
+  el: '.swiper-pagination',
+  dynamicBullets: true,
+  dynamicMainBullets: 2,
+},
+navigation: {
+  nextEl: '.swiper-button-next',
+  prevEl: '.swiper-button-prev',
+},
+
+// scrollbar: {//スクロールバー
+//   el: '.swiper-scrollbar',
+//   draggable: true,
+// },
+
+autoplay: {
+delay: 3000, // 次のスライドに切り替わるまでの時間（ミリ秒）
+disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
+waitForTransition: false, // アニメーションの間も自動再生を止めない（最初のスライドの表示時間を揃えたいときに）
+},
+});
+
+

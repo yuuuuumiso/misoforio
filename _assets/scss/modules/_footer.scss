@@ -1,15 +1,5 @@
 @charset "utf-8";
-
-
-
-
-
-
-
-
-
-
-
+@use 'mixin' as m;
 
 // waves
 .mv__waves {
@@ -17,79 +7,53 @@
   bottom: -35rem;
   left: 0;
   width: 100%;
-  margin-top: -30rem;
+  // margin-top: -30rem;
   transform: rotate(180deg);
   @include m.mq(sp) {
       bottom: -13.9rem;
       margin-top: -10rem;
   }
+  .parallax>use {
+    animation: move-forever 6s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    }    
 }
-.parallax>use {
-animation: move-forever 6s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-}
 
 
+.sec.contact {
+  background-image: linear-gradient(
+    -45deg,
+    rgb(70, 193, 230) 0%,
+    rgb(14, 124, 199) 100%
+  );
+  color: #fff;
+  margin: 0 auto 0;
+  padding: 40rem 0 10rem;
+  @include m.mq(sp) {
+    padding: 20rem 0 10rem;
+  }
+  .container {
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 6px;
+  }
+  .head {
+    border-radius: 6px 6px 0px 0px;
+    color: #fafafa;
+  }
+  p,
+  .wpcf7-response-output {
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+  input,
+  textarea {
+    padding: 10px 10px 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    width: 100%;
+    color: #333;
+  }
 
-
-.intro {
-  font-size: 1.4rem;
-  border-top: 2px solid #ddd;
-  text-align: center;
-  .row {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    @include sp {
-      max-width: 500px;
-      margin: auto;
-    }
-    .item {
-      @include sp {
-        width: 44%;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-    }
-    .img {
-      margin-bottom: 20px;
-    }
-    .txt {
-      color: $gray-3;
-    }
-    a {
-      display: block;
-    }
-  }
-}
-.foot {
-  background: #545454;
-  padding: 50px 10px;
-  &__inner {
-    margin: auto;
-    max-width: 1000px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  &__list {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  &__lists {
-    @include sp {
-      width: 100%;
-      text-align: center;
-      order: 1;
-      margin-bottom: 30px;
-    }
-  }
-  &__logo {
-    @include sp {
-      order: 2;
-      text-align: center;
-      width: 200px;
-      margin: auto;
-    }
-  }
 }
