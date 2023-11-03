@@ -987,7 +987,7 @@ img.is-sp {
 	max-width: 1200px;
 	margin: auto;
 	display: block;
-	padding: 10rem 0 0rem;
+	padding: 10rem 0 5rem;
 }
 
 .content__main.content__main--works {
@@ -998,10 +998,13 @@ img.is-sp {
 	margin: 5rem 0 0;
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-start;
+	margin: 0 0 5rem;
 }
 
 .postBlock__img {
 	width: 48%;
+	margin: 0;
 }
 
 .postBlock__img img {
@@ -1017,20 +1020,24 @@ img.is-sp {
 	flex-wrap: wrap;
 	display: flex;
 	border-bottom: 1px dotted #ccc;
+	font-size: 2rem;
 }
 
 .worksList dt {
 	border-top: 1px dotted #ccc;
 	width: 14rem;
 	padding: 2rem 0 2rem 2rem;
-	font-size: 2rem;
 }
 
 .worksList dd {
 	padding: 2rem 2rem 2rem 1rem;
 	width: calc(100% - 14rem);
-	font-size: 2rem;
 	border-top: 1px dotted #ccc;
+}
+
+.postArticle p {
+	font-size: 2.2rem;
+	margin-bottom: 1rem;
 }
 
 /* Share button */
@@ -1227,7 +1234,7 @@ body {
 
 .mv__waves {
 	bottom: -13.9rem;
-	margin-top: -10rem;
+	margin-top: -15rem;
 }
 
 .sec.contact {
@@ -1425,6 +1432,31 @@ body {
 .postLinks__item {
 	width: 100%;
 	margin-bottom: 1em;
+}
+
+.content.content--works {
+	padding: 80px 0 5rem;
+}
+
+.content__main.content__main--works {
+	padding: 0 2rem;
+}
+
+.postBlock {
+	display: block;
+}
+
+.postBlock__img {
+	width: 100%;
+	margin: 0 0 5rem;
+}
+
+.postBlock__body {
+	width: 100%;
+}
+
+.worksList {
+	font-size: 2.4rem;
 }
 
 .blogLists--card .blogList {

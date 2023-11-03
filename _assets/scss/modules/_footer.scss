@@ -1,5 +1,5 @@
 @charset "utf-8";
-@use 'mixin' as m;
+@use "mixin" as m;
 
 // waves
 .mv__waves {
@@ -10,14 +10,13 @@
   // margin-top: -30rem;
   transform: rotate(180deg);
   @include m.mq(sp) {
-      bottom: -13.9rem;
-      margin-top: -10rem;
+    bottom: -13.9rem;
+    margin-top: -15rem;
   }
-  .parallax>use {
+  .parallax > use {
     animation: move-forever 6s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-    }    
+  }
 }
-
 
 .sec.contact {
   background-image: linear-gradient(
@@ -55,5 +54,4 @@
     width: 100%;
     color: #333;
   }
-
 }
