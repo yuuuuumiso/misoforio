@@ -1,8 +1,7 @@
 <?php get_header(); ?>
-
 <div class="mv">
   <div class="mv__logo"><span class="randomAnime">Miso's</span><span class="randomAnime">PORTFOLIO</span></div>
-  <div class="mv__img fadeUp"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_img03.png"></div>
+  <div class="mv__img"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_img03.png"></div>
 </div>
 <section class="sec about">
   <div class="sec__inner">
@@ -13,7 +12,7 @@
     <div class="aboutBox">
       <div class="aboutBox__img"><img src="<?php echo get_template_directory_uri(); ?>/img/about_img01.jpg"></div>
       <div class="aboutBox__body">
-        <h3 class="aboutBoxTtl">Webコーダー / ブロガー<br><span>味噌</span></h3>
+        <h3 class="aboutBoxTtl">Webコーダー / ブロガー<br><span>味噌ブログ</span></h3>
         <p class="aboutBox__desc">1990年生まれのオス。大学を卒業後、営業職に従事するも職場でのパワハラに合い、メンタル崩壊前に逃亡。<br><br>その後は東南アジアを放浪し、職業訓練校にてWeb制作を学ぶ。卒業後は制作会社でコーダーとして3年間勤務。現在はメーカーでWeb担当として働いてます。主な業務は「コーディング・デザイン・マーケティング」です。<br><br>個人では月間PVは3.5万の「味噌ブログ」を運営。並行して運用しているnoteは11万アクセスを突破しました。</p>
         <ul class="aboutBox__snsLists">
           <li class="aboutBox__snsList"><a href="https://twitter.com/shiromisooo"><img src="<?php echo get_template_directory_uri(); ?>/img/ico_tw.svg"></a></li>
@@ -141,19 +140,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <?php get_footer(); ?>

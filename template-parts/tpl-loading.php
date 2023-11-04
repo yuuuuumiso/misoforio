@@ -1,12 +1,18 @@
+<?php if ( is_home() || is_front_page() ) : ?>
+
+
+<div class="splashbg"></div>
+<div id="splash">
+<div id="splash_logo">
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
 <g display="none">
 	<text transform="matrix(1 0 0 1 18.892 166.2708)" display="inline"><tspan x="0" y="0" fill="#444444" font-family="'TsukuARdGothicStd-B-83pv-RKSJ-H'" font-size="54.4144px">味噌</tspan><tspan x="108.8" y="0" fill="#444444" font-family="'TsukuARdGothicStd-B-83pv-RKSJ-H'" font-size="54.4144px" letter-spacing="-7">ブ</tspan><tspan x="155.6" y="0" fill="#444444" font-family="'TsukuARdGothicStd-B-83pv-RKSJ-H'" font-size="54.4144px" letter-spacing="-4">ロ</tspan><tspan x="205.7" y="0" fill="#444444" font-family="'TsukuARdGothicStd-B-83pv-RKSJ-H'" font-size="54.4144px">グ</tspan></text>
 </g>
 <g>
-	<circle fill="#FFFFFF" cx="152.6" cy="104.6" r="91.7"/>
+	<circle class="circle" fill="#FFFFFF" cx="152.6" cy="104.6" r="91.7"/>
 	<path fill="#444444" d="M152.6,199.7c-52.4,0-95.1-42.7-95.1-95.1s42.7-95.1,95.1-95.1s95.1,42.7,95.1,95.1S205,199.7,152.6,199.7z
 		 M152.6,16.2c-48.7,0-88.4,39.6-88.4,88.4s39.6,88.4,88.4,88.4s88.4-39.6,88.4-88.4S201.3,16.2,152.6,16.2z"/>
 </g>
@@ -77,3 +83,10 @@
 		c0,3,0.6,5.4,1.9,7.1c1.3,1.7,3,2.6,5.2,2.6c2.2,0,4-0.8,5.2-2.4c1.2-1.6,1.9-4,1.9-7V276.5z"/>
 </g>
 </svg>
+
+
+<!--このSVGタグの作り方は下記に記述-->
+<!--/splash_logo--></div>
+<!--/splash--></div>
+
+<?php endif; ?>

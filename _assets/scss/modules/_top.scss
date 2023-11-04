@@ -27,8 +27,6 @@
     &__img{
         width: 50%;
         padding: 0 8vw 0 0;
-        animation: site-title 1s ease 0.4s 1 normal forwards;
-        //animation-fill-mode: forwards;
         opacity: 0;
         @include m.mq(sp) {
             padding: 0 0 5vw 0;

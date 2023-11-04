@@ -22,6 +22,9 @@
 }
 
 // パンくず
+.site-title{
+  animation: site-title 1s ease 1.2s 1 normal forwards;
+}
 @keyframes site-title {
   0% {
     opacity: 0;
@@ -76,5 +79,4 @@
 .randomAnime {
 	visibility: hidden;
 }
-
   /*anim end*/

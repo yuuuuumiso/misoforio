@@ -120,15 +120,24 @@ function wp_css($css_name, $file_path){
 //関数wp_cssの第一引数へスタイルシートのid名'style'、第二引数へスタイルシートのパス'/css/style.css'を引き渡して実行する
 wp_css('style', '/css/style.css');
 
-
     //WP本体のjQuery+jsファイルを読み込む
-    wp_enqueue_script('jquery');
-    wp_enqueue_script('my_script',DIRE.'/js/script.js');
+    wp_enqueue_script('jquery',array(),false,true);
     wp_enqueue_script('swiper-js','https://unpkg.com/swiper@8/swiper-bundle.min.js',array(),false,true);
-	//実際に動かすための設定ファイル
 	wp_enqueue_script("swiper-conf",get_theme_file_uri("/js/swiper-conf.js"),array("swiper-js"),false,true);
     wp_enqueue_script('textillate-js','https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js',array(),false,true);
-    wp_enqueue_script('lettering-js','http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-8/js/jquery.lettering.js',array(),false,true);
+    wp_enqueue_script('lettering-js','https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/8-8/js/jquery.lettering.js',array(),false,true);
+    wp_enqueue_script('vivus-js','https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js',array(),false,true);
+    wp_enqueue_script('my_script',DIRE.'/js/script.js',array(),false,true);
+    if (is_home() || is_front_page()) {
+        ?>
+        <script>
+            alert();
+            document.addEventListener('DOMContentLoaded', () => {
+                console.log("テストメッセージです: このスクリプトは、トップページまたはフロントページで実行されています。");
+            });
+        </script>
+        <?php
+    }
 }
 add_action('wp_enqueue_scripts', 'add_files');
 
