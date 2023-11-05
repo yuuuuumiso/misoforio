@@ -129,14 +129,7 @@ wp_css('style', '/css/style.css');
     wp_enqueue_script('vivus-js','https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js',array(),false,true);
     wp_enqueue_script('my_script',DIRE.'/js/script.js',array(),false,true);
     if (is_home() || is_front_page()) {
-        ?>
-        <script>
-            alert();
-            document.addEventListener('DOMContentLoaded', () => {
-                console.log("テストメッセージです: このスクリプトは、トップページまたはフロントページで実行されています。");
-            });
-        </script>
-        <?php
+        wp_enqueue_script('top_script',DIRE.'/js/top.js',array(),false,true);
     }
 }
 add_action('wp_enqueue_scripts', 'add_files');
