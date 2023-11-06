@@ -970,6 +970,11 @@ img.is-sp {
 	font-size: 2.2rem;
 }
 
+.postBody p a {
+	text-decoration: underline;
+	color: #4f96f6;
+}
+
 .postBody ul {
 	margin-bottom: 3rem;
 }
@@ -983,6 +988,11 @@ img.is-sp {
 	font-size: 1.8rem;
 	padding: 2rem;
 	background: #ededed;
+}
+
+.postBody .wp-block-embed__wrapper {
+	font-size: 2.2rem;
+	margin-bottom: 3rem;
 }
 
 .postLinks {

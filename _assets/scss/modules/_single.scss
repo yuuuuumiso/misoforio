@@ -91,6 +91,10 @@ justify-content: space-between
   p{
     margin-bottom: 3rem;
     font-size: 2.2rem;
+    a{
+      text-decoration: underline;
+      color:#4f96f6;
+    }
   }
   ul{
     margin-bottom: 3rem;
@@ -103,6 +107,10 @@ justify-content: space-between
     font-size: 1.8rem;
     padding: 2rem;
     background: #ededed;
+  }
+  .wp-block-embed__wrapper {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
   }
 }
 
