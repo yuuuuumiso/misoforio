@@ -1,4 +1,4 @@
-    <li class="blogList">
+    <li class="blogList" id="post-<?php the_ID(); ?>">
          <a class="blogList__link" href="<?php the_permalink(); ?>">
           <p class="blogList__img"><?php the_post_thumbnail('square'); ?></p>
           <div class="blogList__body">

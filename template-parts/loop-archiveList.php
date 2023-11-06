@@ -1,4 +1,4 @@
-<li class="blogList">
+<li class="blogList" id="post-<?php the_ID(); ?>" >
   <a class="blogList__link" href="<?php the_permalink(); ?>">
     <p class="blogList__img">
 
@@ -21,6 +21,7 @@
         </li>
       </ul>
       <p class="blogList__ttl"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></p>
+      <div class="blogList__excerpt"><?php the_excerpt(); ?></div>
     </div>
   </a>
 </li>

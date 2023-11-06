@@ -21,6 +21,7 @@
 </section>
 </div><!-- .wrap -->
 <!-- <div id="cursor" class="cursor"></div> -->
+<?php get_template_part('template-parts/tpl', 'loading'); ?>
 <?php wp_footer(); ?>
 </footer>
 

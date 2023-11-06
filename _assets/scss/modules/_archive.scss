@@ -19,10 +19,16 @@
 				@include mq(sp) {
 					height: clamp(100px, 45vw, 300px);
 				}
-			}
+			  }
 			}
 			&__body{
 				width: 100%;
+			}
+			&__excerpt{
+				font-size: 1.8rem;
+			}
+			&__ttl{
+				margin-bottom: 1rem;
 			}
 		}
 	}
