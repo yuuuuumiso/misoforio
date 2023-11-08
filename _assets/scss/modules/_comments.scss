@@ -1,0 +1,148 @@
+
+    .comments{
+        font-size: 2rem;
+        text-align: center;
+        margin: auto;
+        margin: 3rem 0 0;
+    }
+.logged-in-as{
+    margin-bottom: 2rem;
+}
+.comment-form-comment{
+    display: flex;
+    justify-content: center;
+}
+
+
+.comments {
+    border-top: 1px solid #ddd;
+    padding-top: 50px;
+    margin-top: 50px;
+    font-size: 14px;
+  }
+
+  .comments .comment-respond .comment-reply-title {
+    font-size: 18px;
+  }
+
+  .comments .comment-respond + p {
+    // border-top: 1px dotted #eee;
+    border-bottom: 1px dotted #eee;
+    text-align: right;
+  }
+  .comments .comment-form .comment-notes {
+    font-size: 12px;
+  }
+
+  .comments .comment-form .logged-in-as {
+    text-align: right;
+    font-size: 14px;
+  }
+
+  .comments .comment-form .comment-form-comment label {
+    display: block;
+  }
+  .comments .comment-form .comment-form-comment textarea {
+    width: 100%;
+    height: 200px;
+    text-align: left;
+        padding: 2rem;
+        margin:0 2rem 2rem;
+        border: 1px #ddd solid;
+        border-radius: 5px;
+}
+  .comments .comment-form .comment-form-author,
+  .comments .comment-form .comment-form-email,
+  .comments .comment-form .comment-form-url {
+    display: flex;
+    align-items: center;
+  }
+  .comments .comment-form .comment-form-author label,
+  .comments .comment-form .comment-form-email label,
+  .comments .comment-form .comment-form-url label {
+    width: 180px;
+    white-space: nowrap;
+  }
+  .comments .comment-form .comment-form-author input,
+  .comments .comment-form .comment-form-email input,
+  .comments .comment-form .comment-form-url input {
+    width: calc(100% - 180px);
+    padding: 10px;
+  }
+  .comments .comment-form .comment-form-cookies-consent {
+    font-size: 12px;
+  }
+
+  .comments .comment-form .form-submit {
+    text-align: center;
+  }
+  .comments .comment-form .form-submit .submit {
+    display: inline-block;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px 5px 5px 5px !important;
+    border: none;
+    background-color: #eee;
+    position: relative;
+    margin-bottom: 3rem;
+  }
+
+  .comments .comment-form .form-submit .submit:hover {
+    opacity: 0.8;
+  }
+  .comments .commentlist .comment {
+    padding: 15px 0;
+    border-bottom: 1px dotted #ddd;
+  }
+  .comments .commentlist .comment:last-child {
+    border-bottom: none;
+  }
+  .comments .commentlist .comment .children {
+    padding-left: 30px;
+    margin-left: 30px;
+    border-left: 2px solid #eee;
+  }
+  .comments .commentlist .comment .comment-body .comment-awaiting-moderation {
+    text-align: center;
+    display: block;
+    padding-top: 15px;
+  }
+  .comments .commentlist .comment .comment-body .comment-author {
+    display: flex;
+    align-items: center;
+  }
+  .comments .commentlist .comment .comment-body .comment-author cite {
+    margin-left: 10px;
+  }
+  .comments .commentlist .comment .comment-body .comment-meta {
+    text-align: right;
+    font-size: 12px;
+  }
+
+  .comments .commentlist .comment .comment-body p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .comments .commentlist .comment .comment-body .reply {
+    text-align: center;
+  }
+  .comments .commentlist .comment .comment-body .reply .comment-reply-link {
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px 5px 5px 5px !important;
+    border: none;
+    background-color: #eee;
+  }
+
+
+
