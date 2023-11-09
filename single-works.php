@@ -4,7 +4,13 @@
 
 
 
-
+<div class="page-head">
+			  <?php echo get_main_image(); ?>
+              <div class="wrapper">
+                <span class="page-title-en"><?php echo get_main_en_title(); ?></span>
+                <h2 class="page-title"><?php echo get_main_title(); ?></h2>
+              </div>
+            </div>
 
 
 
@@ -36,7 +42,7 @@
           <dt>作品名</dt>
           <dd>：<?php echo get_field('works-name'); ?></dd>
           <dt>URL</dt>
-          <dd>：<?php echo get_field('works-url'); ?></dd>
+          <dd>：<a href="<?php echo get_field('works-url'); ?>"><?php echo get_field('works-url'); ?></a></dd>
           <dt>使用ツール</dt>
           <dd>：<?php echo get_field('works-tool'); ?></dd>
           <dt>制作期間</dt>
