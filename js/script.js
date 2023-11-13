@@ -2,59 +2,7 @@
 //enquede読む場合は$をjQueryにするwp仕様にする必要がある
 // 書き出し部分だけの変更すればその中は$で動く
 
-jQuery(function($) {
-
-//vars
-// var flug = true,
-//     $openBtn = $('.openbtn'),
-//     $body = $(document.body), 
-//     $navBg = $('.g-nab-bg');
-
-// $openBtn.click(function () {//ボタンがクリックされたら
-// 	$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
-//   $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
-//   $("#g-nav li").toggleClass('smooth');//li に smoothクラスを付与
-//   $body.toggleClass('is-open');
-//   $navBg.toggleClass('is-open');
-// });
-
-// $navBg.on("click", function () {
-// 	$(this).removeClass('is-open');
-//   $openBtn.removeClass('active');
-//   $("#g-nav").removeClass('panelactive');
-//   $("#g-nav li").removeClass('smooth');
-//   $body.removeClass('is-open');
-//   });
-
-document.addEventListener('DOMContentLoaded', function () {
-  var flug = true,
-      openBtn = document.querySelector('.openbtn'),
-      body = document.body,
-      navBg = document.querySelector('.g-nab-bg'),
-      gNav = document.getElementById('g-nav');
-
-  openBtn.addEventListener('click', function () {
-    this.classList.toggle('active');
-    gNav.classList.toggle('panelactive');
-    Array.from(gNav.getElementsByTagName('li')).forEach(function (li) {
-      li.classList.toggle('smooth');
-    });
-    body.classList.toggle('is-open');
-    navBg.classList.toggle('is-open');
-  });
-
-  navBg.addEventListener('click', function () {
-    this.classList.remove('is-open');
-    openBtn.classList.remove('active');
-    gNav.classList.remove('panelactive');
-    Array.from(gNav.getElementsByTagName('li')).forEach(function (li) {
-      li.classList.remove('smooth');
-    });
-    body.classList.remove('is-open');
-  });
-});
-
-
+//jQuery(function($) {
 
 
 //ヘッダーナビ
@@ -103,4 +51,61 @@ document.addEventListener('DOMContentLoaded', function () {
   //     });
   // });
 
-});//ready
+//});//ready
+
+
+
+
+
+//vars
+// var flug = true,
+//     $openBtn = $('.openbtn'),
+//     $body = $(document.body), 
+//     $navBg = $('.g-nab-bg');
+
+// $openBtn.click(function () {//ボタンがクリックされたら
+// 	$(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+//   $("#g-nav").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+//   $("#g-nav li").toggleClass('smooth');//li に smoothクラスを付与
+//   $body.toggleClass('is-open');
+//   $navBg.toggleClass('is-open');
+// });
+
+// $navBg.on("click", function () {
+// 	$(this).removeClass('is-open');
+//   $openBtn.removeClass('active');
+//   $("#g-nav").removeClass('panelactive');
+//   $("#g-nav li").removeClass('smooth');
+//   $body.removeClass('is-open');
+//   });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+      const openBtn = document.querySelector('.openbtn'),
+      body = document.body,
+      navBg = document.querySelector('.g-nab-bg'),
+      gNav = document.getElementById('g-nav');
+
+  openBtn.addEventListener('click', function () {
+    this.classList.toggle('active');
+    gNav.classList.toggle('panelactive');
+    Array.from(gNav.getElementsByTagName('li')).forEach(function (li) {
+      li.classList.toggle('smooth');
+    });
+    body.classList.toggle('is-open');
+    navBg.classList.toggle('is-open');
+  });
+
+  navBg.addEventListener('click', function () {
+    this.classList.remove('is-open');
+    openBtn.classList.remove('active');
+    gNav.classList.remove('panelactive');
+    Array.from(gNav.getElementsByTagName('li')).forEach(function (li) {
+      li.classList.remove('smooth');
+    });
+    body.classList.remove('is-open');
+  });
+
+});//on.load
+
