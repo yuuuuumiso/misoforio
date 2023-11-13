@@ -171,7 +171,8 @@ img.is-sp {
 
 /* Loading背景画面設定　*/
 
-#splash { /*fixedで全面に固定*/
+#splash {
+	display: none; /*fixedで全面に固定*/
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -448,10 +449,14 @@ img.is-sp {
 	color: #fafafa;
 }
 
-.sec.contact p,
 .sec.contact .wpcf7-response-output {
 	font-size: 2.6rem;
 	margin-bottom: 3rem;
+}
+
+.sec.contact .wpcf7 {
+	font-size: 2.2rem;
+	line-height: 2.5;
 }
 
 .sec.contact input,
@@ -463,6 +468,7 @@ img.is-sp {
 	box-sizing: border-box;
 	width: 100%;
 	color: #333;
+	margin-bottom: 2rem;
 }
 
 .wrap {
@@ -975,6 +981,7 @@ img.is-sp {
 .postBody p {
 	margin-bottom: 3rem;
 	font-size: 2.2rem;
+	line-height: 1.8;
 }
 
 .postBody p a {
@@ -982,15 +989,35 @@ img.is-sp {
 	color: #4f96f6;
 }
 
+.postBody figure {
+	margin-bottom: 3rem;
+}
+
 .postBody ul,
 .postBody ol {
 	margin-bottom: 3rem;
+	color: #1e366a;
+	border: dashed #1e366a 1px; /*ドット 色 太さ*/
+	padding: 0.5em 0.5em 0.5em 2em;
+	background: #f3f3f3;
 }
 
 .postBody ul li,
 .postBody ol li {
 	font-size: 2.2rem;
 	font-weight: bold;
+	margin-bottom: 2rem;
+	line-height: 1.5;
+	padding: 0.5em 2em 0 0.5em;
+	margin-left: 1em;
+	list-style-type: disc;
+}
+
+.postBody ul li ul,
+.postBody ul li ol,
+.postBody ol li ul,
+.postBody ol li ol {
+	border: none;
 }
 
 .postBody .wp-block-code {
@@ -1117,6 +1144,11 @@ img.is-sp {
 	padding: 2rem 2rem 2rem 1rem;
 	width: calc(100% - 14rem);
 	border-top: 1px dotted #ccc;
+}
+
+.worksList a {
+	color: #0066c0;
+	text-decoration: underline;
 }
 
 .postArticle p {
@@ -1376,6 +1408,48 @@ img.is-sp {
 
 .btn01--A {
 	margin: 0 1.5vw 0 auto;
+}
+
+/* タブメニュー */
+
+.tab-title-list {
+	margin-bottom: 3rem;
+}
+
+.tab-title-list {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	transition: all 0.3s;
+}
+
+.tab-title {
+	width: 28%;
+	cursor: pointer;
+	transition: all 0.3s;
+	text-align: center;
+	letter-spacing: 0.2em;
+	font-size: 2.6rem;
+	border-bottom: 1px solid transparent;
+	padding-bottom: 1.5rem;
+}
+
+.tab-title.selected {
+	border-bottom: 2px solid #0e7dc7;
+	opacity: 0.8;
+}
+
+.tab-title:not(.selected):hover {
+	opacity: 0.6;
+}
+
+.tab-list {
+	display: none;
+	transition: all 0.3s;
+}
+
+.tab-list.show {
+	display: block;
 }
 
 .comments {
@@ -1706,7 +1780,7 @@ body {
 
 .blogList {
 	width: 100%;
-	margin: 0 0 5rem;
+	margin: 0 0 2.5rem;
 }
 
 .blogList__date {

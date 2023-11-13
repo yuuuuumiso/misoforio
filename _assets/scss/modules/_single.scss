@@ -91,17 +91,33 @@ justify-content: space-between
   p{
     margin-bottom: 3rem;
     font-size: 2.2rem;
+    line-height: 1.8;
     a{
       text-decoration: underline;
       color:#4f96f6;
     }
   }
+  figure{
+    margin-bottom: 3rem;    
+  }
   ul,ol{
     margin-bottom: 3rem;
+    color: #1e366a;
+    border: dashed #1e366a 1px;/*ドット 色 太さ*/
+    padding: 0.5em 0.5em 0.5em 2em;
+    background: #f3f3f3;
     li{
       font-size: 2.2rem;
       font-weight: bold;
-    }
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      padding: 0.5em 2em 0 0.5em;
+      margin-left: 1em;
+      list-style-type: disc;
+      ul,ol{
+        border: none;
+      }
+     }
   }
   .wp-block-code{
     font-size: 1.8rem;

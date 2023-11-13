@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
-  <!-- Google tag (gtag.js) -->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# <?php if ( is_front_page() ) { echo 'website'; } else {echo 'article';} ?>: http://ogp.me/ns/<?php if ( is_front_page() ) { echo 'website'; } else {echo 'article';} ?>#">
+<!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRLGZ01DVB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,6 +14,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- OGPタグ -->
+  <meta property="og:title" content="<?php echo the_title(); ?>" />
+  <meta property="og:type" content="<?php if ( is_front_page() ) { echo 'website'; } else {echo 'article';} ?>" />
+  <meta property="og:image" content="https://works.yuuuuumiso.com/wp-content/themes/v/img/ogp.png">
+  <meta property="og:url" content="<?php echo bloginfo('url');?>" />
+  <meta property="og:site_name" content="<?php echo bloginfo('name');?>" />
+  <meta property="og:description" content="<?php echo get_field('meta-description'); ?>" />
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

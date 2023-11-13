@@ -22,7 +22,6 @@ add_image_size('thumb', 600, 300, true );//リサイズ
 //タイトルタグ
 add_theme_support('title-tag');
 
-
 //2番目のパラメータに指定した箇所がHTML5に準拠した形で出力されるようになります。例えばtype='text/javascript'やtype='text/css'のような不要な属性は出力されなくなります。
 add_theme_support( 'html5', array(
     'search-form',

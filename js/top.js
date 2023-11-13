@@ -16,6 +16,7 @@ var Obj = {
 	out: {// 終了時のアニメーション設定をしたい場合はここに追記
 	}
 }
+
 var element
 //初期設定
 function RandomInit() {
@@ -24,7 +25,7 @@ function RandomInit() {
 }
 
 function RandomAnimeControl() {
-		var elemPos = jQuery(element[1]).offset().top - 50;
+		var elemPos = jQuery(element[1]).offset().top;
 		var scroll = jQuery(window).scrollTop();
 		var windowHeight = jQuery(window).height();
 
@@ -64,25 +65,63 @@ stroke = new Vivus('mask', {//アニメーションをするIDの指定
     animTimingFunction:Vivus.EASE,//動きの加速減速設定
 },
 function(){
-	jQuery("#mask").attr("class", "done");//描画が終わったらdoneというクラスを追加
+	// jQuery("#mask").attr("class", "done");//描画が終わったらdoneというクラスを追加
+	var mask = document.getElementById('mask');
+	mask.classList.add('done');
 }
 );
 
-jQuery(window).on('load', function () {
-	stroke.play();//SVGアニメーションの実行
-    jQuery("#splash_logo").delay(2800).fadeOut('slow');//ロゴを3秒（3000ms）待機してからフェイドアウト
-	jQuery("#splash").delay(2800).fadeOut('slow',function(){
-	jQuery('.mv__img').delay(1500).addClass('site-title');//フェードアウト後bodyにappearクラス付与
-	RandomInit(); /*初期設定を読み込み*/
-	RandomAnimeControl();/*アニメーション用の関数を呼ぶ*/
-	// var h = jQuery(window).height();//ブラウザの高さを取得
-	// jQuery(".splashbg").css({
-	// 	"border-width":h,//ボーダーの太さにブラウザの高さを代入
-	// 	"animation-name":"backBoxAnime"//animation-nameを定義
-	// 	});	
-	// });
-    // jQuery('.splashbg').on('animationend', function() {
-	// 	//alert();
-	// 
+
+
+
+
+
+
+
+const webStorage = function () {
+	if (sessionStorage.getItem('visit')) {
+		stroke.play();
+		jQuery('.mv__img').addClass('site-title');
+		RandomInit(); 
+		RandomAnimeControl();
+	} else {
+	  sessionStorage.setItem('visit', 'true'); 
+	  document.addEventListener('DOMContentLoaded', function() {
+		jQuery("#splash").css("display", "block");
+		stroke.play();//SVGアニメーションの実行
+		jQuery("#splash_logo").delay(2800).fadeOut('slow');//ロゴを3秒（3000ms）待機してからフェイドアウト
+		jQuery("#splash").delay(2800).fadeOut('slow',function(){
+		jQuery('.mv__img').delay(1500).addClass('site-title');//フェードアウト後bodyにappearクラス付与
+		RandomInit(); /*初期設定を読み込み*/
+		RandomAnimeControl();/*アニメーション用の関数を呼ぶ*/
+	  });
+	});	
+  }
+}
+
+webStorage();
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var tabTitles = document.querySelectorAll('.tab-title');
+    var tabLists = document.querySelectorAll('.tab-list');
+
+    tabTitles.forEach(function(tabTitle, index) {
+      tabTitle.addEventListener('click', function() {
+        // クリックされたタブにselectedクラスを追加し、他のタブからは削除
+        tabTitles.forEach(function(title) {
+          title.classList.remove('selected');
+        });
+        tabTitle.classList.add('selected');
+
+        // 表示されているタブコンテンツを非表示にし、クリックされたタブに対応するタブコンテンツを表示
+        tabLists.forEach(function(tabList) {
+          tabList.classList.remove('show');
+        });
+        tabLists[index].classList.add('show');
+      });
+    });
   });
-});
+
+
+

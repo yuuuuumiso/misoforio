@@ -45,7 +45,7 @@
       <a href="" class="right-btn swiper-right-btn" tabindex="0" role="button" aria-label="Previous slide"></a>
     </div>
 
-      <!-- ここ関数化できるな -->
+    <!-- ここ関数化できるな -->
     <div class="worksItems swiper-container">
       <div class="worksItems__wrap swiper-wrapper">
         <?php
@@ -128,18 +128,88 @@
       <h2 class="sec__ttl">B<span class="sec__ttl--small">log</span></h2>
       <p class="sec__ttl-sub">ブログ</p>
     </div>
-    <div class="blogBox">
+    <ul class="tab-title-list">
+      <li class="tab-title selected">新着記事</li>
+      <li class="tab-title">WordPress</li>
+    </ul>
+    <div class="tab-list show">
       <ul class="blogLists">
-        <?php if (have_posts()) : ?>
-          <?php while (have_posts()) : the_post(); ?>
-            <?php get_template_part('template-parts/loop', 'topBlog'); ?>
-        <?php endwhile;
-        endif; ?>
-      </ul>
-      <p class="btn01"><a href="<?php echo esc_url(home_url('blog')); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png"></a></p>
+        <?php
+        $newslist = get_posts(array(
+          'posts_per_page' => 4
+        ));
+        foreach ($newslist as $post) :
+          setup_postdata($post);
+        ?>
+          <?php get_template_part('template-parts/loop', 'topBlog'); ?>
+        <?php endforeach;
+        wp_reset_postdata(); ?>
+        </ul>
     </div>
+    <div class="tab-list tab-list--02">
+      <?php
+      $args = array(
+        'category_name' => 'wordpress',
+        'posts_per_page' => 4,
+      );
+      $news_query = new WP_Query($args);
+      if ($news_query->have_posts()) :
+      ?>
+        <ul class="blogLists">
+          <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
+            <?php get_template_part('template-parts/loop', 'topBlog'); ?>
+          <?php endwhile; ?>
+        </ul>
+      <?php wp_reset_postdata();
+      endif;?>
+    </div>
+    <p class="btn01"><a href="<?php echo esc_url(home_url('blog')); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png"></a></p>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <?php get_footer(); ?>

@@ -1,5 +1,4 @@
 <?php if ( is_home() || is_front_page() ) : ?>
-<div class="splashbg"></div>
 <div id="splash">
 <div id="splash_logo">
 <svg version="1.1" id="mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300px" height="300px" viewBox="0 0 300 300">

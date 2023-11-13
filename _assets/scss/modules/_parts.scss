@@ -34,3 +34,51 @@
     }
   }
 }
+
+
+
+
+
+
+  /* タブメニュー */
+
+  .tab-title-list{
+    margin-bottom: 3rem;
+  }
+
+  .tab-title-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    transition: all .3s;
+  }
+
+  .tab-title {
+    width: 28%;
+    cursor: pointer;
+    transition: all .3s;
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-size: 2.6rem;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1.5rem;
+  }
+
+  .tab-title.selected {
+    border-bottom: 2px solid #0e7dc7;
+    opacity: 0.8;
+  }
+  .tab-title:not(.selected):hover {
+    opacity: 0.6;
+  }
+  .tab-list {
+    display: none;
+    // opacity: 0;
+    transition: all .3s;
+    // height: 0;
+  }
+  .tab-list.show {
+    display: block;
+    // opacity: 1;
+    // height: auto;
+}
