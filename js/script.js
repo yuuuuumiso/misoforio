@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
       navBg = document.querySelector('.g-nab-bg'),
       gNav = document.getElementById('g-nav');
 
-  openBtn.addEventListener('click', function () {
+    function toggleNav(){
     this.classList.toggle('active');
     gNav.classList.toggle('panelactive');
     Array.from(gNav.getElementsByTagName('li')).forEach(function (li) {
@@ -95,9 +95,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     body.classList.toggle('is-open');
     navBg.classList.toggle('is-open');
-  });
+  }
 
-  navBg.addEventListener('click', function () {
+  function closeNav(){
     this.classList.remove('is-open');
     openBtn.classList.remove('active');
     gNav.classList.remove('panelactive');
@@ -105,6 +105,13 @@ document.addEventListener('DOMContentLoaded', function () {
       li.classList.remove('smooth');
     });
     body.classList.remove('is-open');
+  }
+
+  openBtn.addEventListener('click', function () {
+    toggleNav();
+  });
+  navBg.addEventListener('click', function () {
+    closeNav();
   });
 
 });//on.load
