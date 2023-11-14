@@ -73,17 +73,11 @@
   }
   .tab-list {
     display: none;
-    // opacity: 0;
     transition: all .3s;
-    // height: 0;
   }
   .tab-list.show {
     display: block;
-    // opacity: 1;
-    // height: auto;
 }
-
-
 
 .nav-links .page-numbers{
   width: 40px;
