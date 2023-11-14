@@ -106,6 +106,9 @@ justify-content: space-between
     border: dashed #1e366a 1px;/*ドット 色 太さ*/
     padding: 0.5em 0.5em 0.5em 2em;
     background: #f3f3f3;
+    @include m.mq(sp) {
+      padding: 1.5em 0.5em 1.5em 2em;      
+    }
     li{
       font-size: 2.2rem;
       font-weight: bold;
@@ -114,6 +117,10 @@ justify-content: space-between
       padding: 0.5em 2em 0 0.5em;
       margin-left: 1em;
       list-style-type: disc;
+      @include m.mq(sp) {
+        padding: 0.5em 2em 0 0em;
+        margin-bottom: 1rem;
+      }
       ul,ol{
         border: none;
       }
