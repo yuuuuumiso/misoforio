@@ -114,7 +114,7 @@ wp_enqueue_style('animate-style', 'https://cdnjs.cloudflare.com/ajax/libs/animat
 //wp_enqueue_style('my_style',DIRE.'/css/style.css');
 //wp_enqueue_style('style', DIRE.'/css/style.css', array(), date('YmdGis', filemtime(get_template_directory().'/css/style.css')));//パラメータ付与
 
-//関数wp_cssを定義する
+//cssキャッシュ付与
 function wp_css($css_name, $file_path){
   wp_enqueue_style($css_name, DIRE.$file_path, array(), date('YmdGis', filemtime(PATH.$file_path)));
 }

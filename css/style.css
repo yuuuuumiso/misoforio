@@ -829,6 +829,7 @@ img.is-sp {
 	border-radius: 10px 10px 0 0;
 	object-fit: cover;
 	height: 25vh;
+	width: 100%;
 }
 
 .worksItems__body {
@@ -998,7 +999,7 @@ img.is-sp {
 	margin-bottom: 3rem;
 	color: #1e366a;
 	border: dashed #1e366a 1px; /*ドット 色 太さ*/
-	padding: 0.5em 0.5em 0.5em 2em;
+	padding: 2em 0em 2em 2em;
 	background: #f3f3f3;
 }
 
@@ -1098,7 +1099,7 @@ img.is-sp {
 	max-width: 140rem;
 	margin: auto;
 	display: block;
-	padding: 10rem 0 5rem;
+	padding: 50px 0 5rem;
 }
 
 .content__main.content__main--works {
@@ -1110,7 +1111,7 @@ img.is-sp {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin: 0 0 5rem;
+	margin: 4rem 0 5rem;
 }
 
 .postBlock__img {
@@ -1158,7 +1159,7 @@ img.is-sp {
 
 .page-head {
 	width: 100%;
-	height: 330px;
+	height: 280px;
 	text-align: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1168,7 +1169,7 @@ img.is-sp {
 
 .page-head > img {
 	width: 100%;
-	height: 330px;
+	height: 280px;
 	text-align: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1661,11 +1662,11 @@ img.is-sp {
 @media (max-width: 768px) {
 
 .page-head {
-	height: 212px;
+	height: 230px;
 }
 
 .page-head img {
-	height: 212px;
+	height: 230px;
 }
 
 }
@@ -1875,7 +1876,7 @@ body {
 
 .postBody ul,
 .postBody ol {
-	padding: 1.5em 0.5em 1.5em 2em;
+	padding: 2em 0em 2em 2em;
 }
 
 .postBody ul li,
@@ -1894,7 +1895,7 @@ body {
 }
 
 .content.content--works {
-	padding: 80px 0 5rem;
+	padding: 30px 0 5rem;
 }
 
 .content__main.content__main--works {

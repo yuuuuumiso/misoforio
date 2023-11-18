@@ -261,7 +261,8 @@
     img{
     border-radius: 10px 10px 0 0;
     object-fit: cover; 
-    height: 25vh;
+    height:25vh;
+    width: 100%;
     @include m.mq(sp) {
         height: 20vh;
         }

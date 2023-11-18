@@ -15,12 +15,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- OGPタグ -->
-  <meta property="og:title" content="<?php echo the_title(); ?>" />
+  <meta property="og:title" content="<?php if ( is_front_page() ) { echo get_bloginfo('name'); } else {echo the_title();} ?>">
   <meta property="og:type" content="<?php if ( is_front_page() ) { echo 'website'; } else {echo 'article';} ?>" />
   <meta property="og:image" content="https://works.yuuuuumiso.com/wp-content/themes/v/img/ogp.png">
   <meta property="og:url" content="<?php echo bloginfo('url');?>" />
   <meta property="og:site_name" content="<?php echo bloginfo('name');?>" />
-  <meta property="og:description" content="<?php echo get_field('meta-description'); ?>" />
+  <meta property="og:description" content="<?php if (is_front_page()) {echo get_bloginfo('description');} else {echo get_field('meta-description');} ?>" />
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

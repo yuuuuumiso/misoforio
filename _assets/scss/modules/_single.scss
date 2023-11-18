@@ -104,10 +104,10 @@ justify-content: space-between
     margin-bottom: 3rem;
     color: #1e366a;
     border: dashed #1e366a 1px;/*ドット 色 太さ*/
-    padding: 0.5em 0.5em 0.5em 2em;
+    padding: 2em 0em 2em 2em;
     background: #f3f3f3;
     @include m.mq(sp) {
-      padding: 1.5em 0.5em 1.5em 2em;      
+      padding: 2em 0em 2em 2em;      
     }
     li{
       font-size: 2.2rem;
