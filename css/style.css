@@ -771,7 +771,7 @@ img.is-sp {
 	object-fit: cover;
 	width: 100%;
 	object-position: auto;
-	height: 20rem;
+	aspect-ratio: 1;
 }
 
 .blogList__body {
@@ -828,7 +828,7 @@ img.is-sp {
 .worksItems__image img {
 	border-radius: 10px 10px 0 0;
 	object-fit: cover;
-	height: 25vh;
+	aspect-ratio: 16/9;
 	width: 100%;
 }
 
@@ -976,7 +976,7 @@ img.is-sp {
 .content__main .postThumb img {
 	width: 100%;
 	object-fit: cover;
-	height: 80vh;
+	aspect-ratio: 16/9;
 }
 
 .postBody p {
@@ -1842,10 +1842,6 @@ body {
 	padding: 3rem 0 3rem 2rem;
 }
 
-.worksItems__image img {
-	height: 20vh;
-}
-
 .worksItems__item.swiper-slide.swiper-slide-active {
 	transform: scale(1.2); /* スライドの大きさ調整 */
 }
@@ -1868,10 +1864,6 @@ body {
 
 .content__main h4 {
 	font-size: 2.8rem;
-}
-
-.content__main .postThumb img {
-	height: 30vh;
 }
 
 .postBody ul,

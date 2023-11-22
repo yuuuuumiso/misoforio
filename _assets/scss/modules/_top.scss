@@ -181,7 +181,8 @@
             object-fit: cover;
             width: 100%;
             object-position:auto;
-            height: 20rem;
+            aspect-ratio: 1;
+            // height: 20rem;
         }
     }
     &__body{
@@ -261,10 +262,11 @@
     img{
     border-radius: 10px 10px 0 0;
     object-fit: cover; 
-    height:25vh;
+    // height:25vh;
+        aspect-ratio: 16/9;
     width: 100%;
     @include m.mq(sp) {
-        height: 20vh;
+        // height: 20vh;
         }
 }
   }
