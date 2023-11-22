@@ -82,13 +82,13 @@
 
 
 document.addEventListener('DOMContentLoaded', function () {
-      const openBtn = document.querySelector('.openbtn'),
-      body = document.body,
-      navBg = document.querySelector('.g-nab-bg'),
-      gNav = document.getElementById('g-nav');
+  const openBtn = document.querySelector('.openbtn'),
+        body = document.body,
+        navBg = document.querySelector('.g-nab-bg'),
+        gNav = document.getElementById('g-nav');
 
-    function toggleNav(){
-    this.classList.toggle('active');
+  function toggleNav() {
+    openBtn.classList.toggle('active');
     gNav.classList.toggle('panelactive');
     Array.from(gNav.getElementsByTagName('li')).forEach(function (li) {
       li.classList.toggle('smooth');
@@ -97,14 +97,14 @@ document.addEventListener('DOMContentLoaded', function () {
     navBg.classList.toggle('is-open');
   }
 
-  function closeNav(){
-    this.classList.remove('is-open');
+  function closeNav() {
     openBtn.classList.remove('active');
     gNav.classList.remove('panelactive');
     Array.from(gNav.getElementsByTagName('li')).forEach(function (li) {
       li.classList.remove('smooth');
     });
     body.classList.remove('is-open');
+    navBg.classList.remove('is-open');
   }
 
   openBtn.addEventListener('click', function () {
@@ -115,4 +115,3 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });//on.load
-
