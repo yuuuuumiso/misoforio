@@ -21,7 +21,7 @@
         </li>
       </ul>
       <p class="blogList__ttl"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></p>
-      <div class="blogList__excerpt"><?php the_excerpt(); ?></div>
+      <div class="blogList__excerpt"><?php echo get_flexible_excerpt(40); ?></div>
     </div>
   </a>
 </li>

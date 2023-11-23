@@ -56,7 +56,7 @@ function my_document_title_separator($separator){
 
 
 
-// ウィジェット機能を有効化
+// ウィジェット機能を有効化：管理画面＞外観＞ウィジェット
 function theme_widgets_init() {
     register_sidebar( array(
         'name' => ' サイドバーウィジェット',

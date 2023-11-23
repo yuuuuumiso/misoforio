@@ -155,3 +155,33 @@ function add_article_post_rewrite_rules($post_rewrite)
     return $return_rule;
 }
 add_filter('post_rewrite_rules', 'add_article_post_rewrite_rules');
+
+
+//記事の抜粋
+
+function cms_excerpt_more() {
+	return '...';
+}
+add_filter( 'excerpt_more', 'cms_excerpt_more' );
+
+//抜粋文字のデフォルト
+function cms_excerpt_length() {
+	return 50;
+}
+add_filter( 'excerpt_mblength', 'cms_excerpt_length' );
+
+// 抜粋機能を固定ページに使えるよう設定
+add_post_type_support( 'page', 'excerpt' );
+
+//抜粋文字を場所によって可変させる
+function get_flexible_excerpt( $number ) {
+	$value = get_the_excerpt();
+	$value = wp_trim_words( $value, $number, '...' );
+	return $value;
+}
+
+//get_the_excerpt() で取得する文字列に改行タグを挿入
+function apply_excerpt_br( $value ) {
+	return nl2br( $value );
+}
+add_filter( 'get_the_excerpt', 'apply_excerpt_br' );
