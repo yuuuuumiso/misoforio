@@ -140,3 +140,20 @@ add_action('wp_enqueue_scripts', 'add_files');
 
 
 
+//ループ用の関数
+
+function get_child_pages($number,$postType) {
+
+$args = array( //サブクエリは専用のphpに書くか、関数化する
+    'post_type' => $postType, //投稿タイプ
+    'post_status' => 'publish', //公開済み
+    'posts_per_page' => $number, // 表示する数
+    'orderby'        => 'date', //投稿日時
+    'order'          => 'DESC', //降順
+    'has_password' => false,
+  );
+
+$child_pages = new WP_Query( $args );
+return $child_pages;
+
+}

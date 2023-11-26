@@ -44,22 +44,11 @@
       <a href="" class="left-btn swiper-left-btn" tabindex="0" role="button" aria-label="Next slide"></a>
       <a href="" class="right-btn swiper-right-btn" tabindex="0" role="button" aria-label="Previous slide"></a>
     </div>
-
-    <!-- ここ関数化できるな -->
     <div class="worksItems swiper-container">
       <div class="worksItems__wrap swiper-wrapper">
-        <?php
-        $args = array( //サブクエリは専用のphpに書くか、関数化する
-          'post_type' => 'works', //投稿タイプ
-          'post_status' => 'publish', //公開済み
-          'posts_per_page' => 6, // 表示する数
-          'orderby'        => 'date', //投稿日時
-          'order'          => 'DESC', //降順
-          'has_password' => false,
-        ); ?>
-        <?php $my_query = new WP_Query($args); ?>
-        <?php if ($my_query->have_posts()) : ?>
-          <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+      <?php $works_posts = get_child_pages( 10, 'works' ); ?>
+        <?php if ($works_posts->have_posts()) : ?>
+          <?php while ($works_posts->have_posts()) : $works_posts->the_post(); ?>
             <?php get_template_part('template-parts/loop', 'topWorks'); ?>
         <?php endwhile;
         endif; ?>
