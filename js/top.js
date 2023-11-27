@@ -1,6 +1,26 @@
 
-//top logo anim
+//top SVGアニメーションの描画
+var stroke;
 
+stroke = new Vivus('mask', {//アニメーションをするIDの指定
+    start:'manual',//自動再生をせずスタートをマニュアルに
+    type: 'scenario-sync',// アニメーションのタイプを設定
+    duration: 6,//アニメーションの時間設定。数字が小さくなるほど速い
+    forceRender: false,//パスが更新された場合に再レンダリングさせない
+    animTimingFunction:Vivus.EASE,//動きの加速減速設定
+},
+function(){
+	// jQuery("#mask").attr("class", "done");//描画が終わったらdoneというクラスを追加
+	var mask = document.getElementById('mask');
+	mask.classList.add('done');
+}
+);
+
+
+
+
+
+//top logo anim
 var Obj = {
 	loop: false,
 	minDisplayTime: 1000,// アニメーションの間隔時間
@@ -54,22 +74,6 @@ function RandomAnimeControl() {
 
 
 
-//top SVGアニメーションの描画
-var stroke;
-
-stroke = new Vivus('mask', {//アニメーションをするIDの指定
-    start:'manual',//自動再生をせずスタートをマニュアルに
-    type: 'scenario-sync',// アニメーションのタイプを設定
-    duration: 6,//アニメーションの時間設定。数字が小さくなるほど速い
-    forceRender: false,//パスが更新された場合に再レンダリングさせない
-    animTimingFunction:Vivus.EASE,//動きの加速減速設定
-},
-function(){
-	// jQuery("#mask").attr("class", "done");//描画が終わったらdoneというクラスを追加
-	var mask = document.getElementById('mask');
-	mask.classList.add('done');
-}
-);
 
 
 
@@ -79,12 +83,11 @@ function(){
 
 
 const webStorage = function () {
-	if (sessionStorage.getItem('visit')) {
-		stroke.play();
-		jQuery('.mv__img').addClass('site-title');
+	if (sessionStorage.getItem('visit')) {//2回目以降
+		jQuery('.mv__img').addClass('site-title is-second');
 		RandomInit(); 
 		RandomAnimeControl();
-	} else {
+	} else {//初回
 	  sessionStorage.setItem('visit', 'true'); 
 	  document.addEventListener('DOMContentLoaded', function() {
 		jQuery("#splash").css("display", "block");
@@ -102,6 +105,9 @@ const webStorage = function () {
 webStorage();
 
 
+
+
+//記事タブ
   document.addEventListener('DOMContentLoaded', function() {
     var tabTitles = document.querySelectorAll('.tab-title');
     var tabLists = document.querySelectorAll('.tab-list');

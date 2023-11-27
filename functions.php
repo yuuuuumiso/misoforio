@@ -140,7 +140,7 @@ add_action('wp_enqueue_scripts', 'add_files');
 
 
 
-//ループ用の関数
+//記事抽出の関数
 
 function get_child_pages($number,$postType) {
 
@@ -157,3 +157,5 @@ $child_pages = new WP_Query( $args );
 return $child_pages;
 
 }
+
+

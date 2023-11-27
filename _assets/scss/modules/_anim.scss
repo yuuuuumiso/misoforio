@@ -35,7 +35,9 @@
   }
 }
 
-
+.site-title.is-second{
+  animation-delay: 0s;
+}
 // このパターンでも設定できるし、こっちのほうが楽
 .fadeUp{
   animation-name: fadeUpAnime;

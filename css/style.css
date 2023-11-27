@@ -144,6 +144,10 @@ img.is-sp {
 	animation: site-title 1s ease 1.2s 1 normal forwards;
 }
 
+.site-title.is-second {
+	animation-delay: 0s;
+}
+
 .fadeUp {
 	animation-name: fadeUpAnime;
 	animation-duration: 0.5s;
@@ -1019,6 +1023,14 @@ img.is-sp {
 .postBody ol li ul,
 .postBody ol li ol {
 	border: none;
+	padding: 0.5em 0 0.5em 0.5em;
+}
+
+.postBody ul li ul li,
+.postBody ul li ol li,
+.postBody ol li ul li,
+.postBody ol li ol li {
+	padding: 0em 0 0em 0em;
 }
 
 .postBody .wp-block-code {
@@ -1926,6 +1938,10 @@ body {
 
 .blogLists--card .blogList__img img {
 	height: clamp(100px, 45vw, 300px);
+}
+
+.blogLists--card .blogList__excerpt {
+	font-size: 2.2rem;
 }
 
 .btn01 {

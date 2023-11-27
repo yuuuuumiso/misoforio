@@ -1,3 +1,4 @@
+<?php if(! $foot_cache = get_transient('foot_cache')):ob_start();?>
 <footer>
 <div class="mv__waves">
   <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -9,7 +10,6 @@
     </g>
   </svg>
 </div>
-
 <section class="sec contact">
   <div class="sec__inner sec__inner--contact">
     <div class="sec__ttlBox">
@@ -20,10 +20,15 @@
   </div>
 </section>
 </div><!-- .wrap -->
-<!-- <div id="cursor" class="cursor"></div> -->
 <?php get_template_part('template-parts/tpl', 'loading'); ?>
+<?php 
+    $foot_cache = ob_get_clean();
+    set_transient('foot_cache', $foot_cache, 60*24 ); 
+else:
+    echo $foot_cache;
+endif;
+?>
 <?php wp_footer(); ?>
 </footer>
-
 </body>
 </html>
