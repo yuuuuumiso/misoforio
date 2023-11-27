@@ -23,7 +23,7 @@
 <?php get_template_part('template-parts/tpl', 'loading'); ?>
 <?php 
     $foot_cache = ob_get_clean();
-    set_transient('foot_cache', $foot_cache, 60*24 ); 
+    set_transient('foot_cache', $foot_cache, 60*240 ); 
 else:
     echo $foot_cache;
 endif;

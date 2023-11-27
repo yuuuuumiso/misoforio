@@ -10,7 +10,7 @@
 }
 .comment-form-comment{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 
@@ -32,6 +32,9 @@
   }
   .comments .comment-form .comment-notes {
     font-size: 12px;
+    span{
+      display: block;
+    }
   }
 
   .comments .comment-form .logged-in-as {
@@ -47,7 +50,7 @@
     height: 200px;
     text-align: left;
         padding: 2rem;
-        margin:0 2rem 2rem;
+        margin:0 0rem 2rem;
         border: 1px #ddd solid;
         border-radius: 5px;
 }
@@ -56,21 +59,27 @@
   .comments .comment-form .comment-form-url {
     display: flex;
     align-items: center;
+    margin-bottom: 2rem;
+    justify-content: space-between;
   }
   .comments .comment-form .comment-form-author label,
   .comments .comment-form .comment-form-email label,
   .comments .comment-form .comment-form-url label {
-    width: 180px;
+    width: auto;
     white-space: nowrap;
   }
   .comments .comment-form .comment-form-author input,
   .comments .comment-form .comment-form-email input,
   .comments .comment-form .comment-form-url input {
-    width: calc(100% - 180px);
+    width: calc(70%);
     padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
   }
   .comments .comment-form .comment-form-cookies-consent {
     font-size: 12px;
+    text-align: left;
+    margin-bottom: 2rem;
   }
 
   .comments .comment-form .form-submit {
@@ -144,5 +153,9 @@
     background-color: #eee;
   }
 
-
+.content.post{
+  .comments .comment-form .comment-form-comment textarea {
+    width: 70%;
+ }
+}
 

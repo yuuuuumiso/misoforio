@@ -1512,7 +1512,7 @@ img.is-sp {
 
 .comment-form-comment {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 .comments {
@@ -1535,6 +1535,10 @@ img.is-sp {
 	font-size: 12px;
 }
 
+.comments .comment-form .comment-notes span {
+	display: block;
+}
+
 .comments .comment-form .logged-in-as {
 	text-align: right;
 	font-size: 14px;
@@ -1549,7 +1553,7 @@ img.is-sp {
 	height: 200px;
 	text-align: left;
 	padding: 2rem;
-	margin: 0 2rem 2rem;
+	margin: 0 0rem 2rem;
 	border: 1px #ddd solid;
 	border-radius: 5px;
 }
@@ -1559,24 +1563,30 @@ img.is-sp {
 .comments .comment-form .comment-form-url {
 	display: flex;
 	align-items: center;
+	margin-bottom: 2rem;
+	justify-content: space-between;
 }
 
 .comments .comment-form .comment-form-author label,
 .comments .comment-form .comment-form-email label,
 .comments .comment-form .comment-form-url label {
-	width: 180px;
+	width: auto;
 	white-space: nowrap;
 }
 
 .comments .comment-form .comment-form-author input,
 .comments .comment-form .comment-form-email input,
 .comments .comment-form .comment-form-url input {
-	width: calc(100% - 180px);
+	width: 70%;
 	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
 }
 
 .comments .comment-form .comment-form-cookies-consent {
 	font-size: 12px;
+	text-align: left;
+	margin-bottom: 2rem;
 }
 
 .comments .comment-form .form-submit {
@@ -1657,6 +1667,10 @@ img.is-sp {
 	border-radius: 5px 5px 5px 5px !important;
 	border: none;
 	background-color: #eee;
+}
+
+.content.post .comments .comment-form .comment-form-comment textarea {
+	width: 70%;
 }
 
 @media screen and (min-width: 768px) {
