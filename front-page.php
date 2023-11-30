@@ -22,13 +22,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
 <section class="sec works">
   <div class="sec__inner">
     <div class="sec__ttlBox">
@@ -36,10 +29,7 @@
       <p class="sec__ttl-sub">作品集</p>
     </div>
   </div>
-
-
   <div class="worksBody">
-
     <div class="slide-btn">
       <a href="" class="left-btn swiper-left-btn" tabindex="0" role="button" aria-label="Next slide"></a>
       <a href="" class="right-btn swiper-right-btn" tabindex="0" role="button" aria-label="Previous slide"></a>
@@ -54,26 +44,10 @@
         endif; ?>
         <?php wp_reset_postdata(); ?>
       </div>
-      <!-- ページネーション（※省略可） -->
-      <!-- <div class="swiper-pagination"></div> -->
-      <!-- ナビゲーションボタン（※デフォルトのやつ。今回はカスタム）
-    <div class="swiper-button-prev"></div> 
-    <div class="swiper-button-next"></div>
-    -->
-      <!-- スクロールバー（※省略可） -->
-      <!-- <div class="swiper-scrollbar"></div>  -->
       <p class="btn01 btn01--A"><a href="<?php echo get_post_type_archive_link('works'); ?>" class="btn">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png"></a>
     </div>
   </div>
-
-
 </section>
-
-
-
-
-
-
 <section class="sec skill">
   <div class="sec__inner">
     <div class="sec__ttlBox">
@@ -106,11 +80,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
 <section class="sec blog">
   <div class="sec__inner">
     <div class="sec__ttlBox">
@@ -155,50 +124,4 @@
     <p class="btn01"><a href="<?php echo esc_url(home_url('blog')); ?>">一覧を見る<img src="<?php echo get_template_directory_uri(); ?>/img/ico_btn01.png"></a></p>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php get_footer(); ?>
