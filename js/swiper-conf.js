@@ -19,8 +19,9 @@ var theSwiper = new Swiper('.worksItems', {
    freeModeSticky: true,//スライドに合わせてスクロールがストップしてくれます。
    grabCursor: true, // PCでマウスカーソルを「掴む」マークにする
    watchSlidesProgress: true, // スライドの進行状況を監視する
-
-    pagination: {
+   preventClicks: false,
+   preventClicksPropagation: false,
+   pagination: {
       el: '.swiper-pagination',
       clickable: true, // クリックによるスライド切り替えを有効にする
       type: 'bullets' // 'bullets'（デフォルト） | 'fraction' | 'progressbar'
